@@ -1,17 +1,33 @@
 import os
-from flask import Flask
+from flask import (
+    Flask, flash, render_template, 
+    redirect, request, session, url_for)
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 # pip3 install Flask
+# pip3 install flask-pymongo
+# pip3 install dnspython
 
 
 # Creating an instance of flask
 app = Flask(__name__)
 
+# Config to grab database
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+
+# Pymongo instance to add app using constructure method
+mongo = PyMongo(app)
+
 
 @app.route("/")
-def hello():
-    return "Local Directory test!"
+@app.route("/results")
+def get_results():
+    results = mongo.db.business.find()
+    return render_template("results.html", results=results)
 
 
 # Change debug to FALSE once app is complete
