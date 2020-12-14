@@ -6,11 +6,11 @@
     <title>Results</title>
 </head>
 <body>
-    {% for results in business %}
-        {{ results.name }}<br>
-        {{ results.website }}<br>
-        {{ results.email }}<br>
-        {{ results.address }}<br>
+    {% for business in results %}
+        {{ business.name }}<br>
+        {{ business.website }}<br>
+        {{ business.email }}<br>
+        {{ business.address }}<br><br>
     {% endfor %}
 </body>
 </html>

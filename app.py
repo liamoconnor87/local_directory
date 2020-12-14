@@ -24,10 +24,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/results")
+@app.route("/get_results")
 def get_results():
-    results = mongo.db.business.find()
-    return render_template("results.html", results=results)
+    business = mongo.db.business.find()
+    return render_template("results.html", results=business)
 
 
 # Change debug to FALSE once app is complete
