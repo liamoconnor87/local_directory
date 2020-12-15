@@ -10,6 +10,8 @@
         crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    {% block styles %}
+    {% endblock %}
     <title>Local Directory</title>
 </head>
 <body>
@@ -24,6 +26,10 @@
         </ul>
         </div>
     </nav>
+
+    <div class="logo-cont">
+        <img src="{{ url_for('static', filename='img/LOCAL-logo.png')}}" alt="Local Directory" class="logo" style="width:200px;display:block;margin-left:auto;margin-right:auto;">
+    </div>
     
     <!-- Search Tool -->
     <nav>
