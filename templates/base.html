@@ -15,17 +15,19 @@
     <title>Local Directory</title>
 </head>
 <body>
-    
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right">
-            <li><a href="{{ url_for('login') }}" class="waves-light">Login</a></li>
-            <li><a href="{{ url_for('register') }}" class="waves-light">Sign Up</a></li>
-            <li><a href="{{ url_for('profile') }}" class="waves-light">Profile</a></li>
-        </ul>
-        </div>
-    </nav>
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url_for('index') }} class="brand-logo">Local Directory</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="{{ url_for('login') }}" class="waves-light">Login</a></li>
+                    <li><a href="{{ url_for('register') }}" class="waves-light">Sign Up</a></li>
+                    <li><a href="{{ url_for('profile') }}" class="waves-light">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <div class="logo-cont">
         <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/LOCAL-logo.svg')}}" alt="Local Directory" class="logo"></a>
