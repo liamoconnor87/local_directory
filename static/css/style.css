@@ -1,4 +1,4 @@
-body {
+body{
     background-color: aquamarine;
 }
 
@@ -8,4 +8,8 @@ body {
     margin-left:auto;
     margin-right:auto;
     color: darkblue;
+}
+
+.flashes h2{
+    line-height: 2;
 }
