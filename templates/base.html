@@ -21,10 +21,13 @@
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo">Local Directory</a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="{{ url_for('login') }}" class="waves-light">Login</a></li>
-                    <li><a href="{{ url_for('register') }}" class="waves-light">Sign Up</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}" class="waves-light">Profile</a></li>
-                    <li><a href="#" class="waves-light">Log Out</a></li>
+                    {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="waves-light">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}" class="waves-light">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}" class="waves-light">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}" class="waves-light">Sign Up</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
