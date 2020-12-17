@@ -38,21 +38,23 @@ def login():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-        # checks is password matches db
-        if check_password_hash(
-            existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+        if existing_user:
+            # checks is password matches db
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+
+            else:
+                # if password does not match
+                flash("Incorrect Username/Password")
+                return redirect(url_for("login"))
 
         else:
-            # if password does not match
+            # if username does not match
             flash("Incorrect Username/Password")
             return redirect(url_for("login"))
 
-    else:
-        # if username does not match
-        flash("Incorrect Username/Password")
-        return redirect(url_for("login"))
     return render_template("login.html")
 
 
