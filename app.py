@@ -41,9 +41,11 @@ def login():
         if existing_user:
             # checks is password matches db
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+               existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
 
             else:
                 # if password does not match
@@ -93,13 +95,18 @@ def register():
         # puts the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
 
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # retrieves session user's username from the db
+    # [username] at the end selects that specific field from the user record.
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 # Change debug to FALSE once app is complete
