@@ -46,8 +46,6 @@
         </div>
     </nav>
 
-    <h1>Base Template Test!</h1>
-
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
@@ -59,8 +57,9 @@
                 {% endfor %}
             {% endif %}
         {% endwith%}
-
     </section>
+
+    <h1 class="center-align" >Base Template Test!</h1>
 
     <main class="container">
         {% block content %}

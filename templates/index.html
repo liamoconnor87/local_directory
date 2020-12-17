@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <section class="center-align">
+        <h4>Extension works!</h4>
 
-    <h4>Extension works!</h4>
-
-    {% for business in results %}
-        {{ business.name }}<br>
-        {{ business.website }}<br>
-        {{ business.email }}<br>
-        {{ business.address }}<br><br>
-    {% endfor %}
+        {% for business in results %}
+            {{ business.name }}<br>
+            {{ business.website }}<br>
+            {{ business.email }}<br>
+            {{ business.address }}<br><br>
+        {% endfor %}
+    </section>
 
 {% endblock %}
