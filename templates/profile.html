@@ -6,6 +6,15 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h3 class="center-align text-darken-4">{{ username }}'s Profile</h3>
+
+                {% for users_business in business_id %}
+                    {{ users_business.category_name }}<br>
+                    {{ users_business.name }}<br>
+                    {{ users_business.website }}<br>
+                    {{ users_business.email }}<br>
+                    {{ users_business.address }}<br>
+                {% endfor %}
+                
             </div>
         </div>
     </div>

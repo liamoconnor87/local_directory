@@ -87,8 +87,7 @@ def register():
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "email": request.form.get("email").lower(),
-            "business_name": ""
+            "email": request.form.get("email").lower()
         }
         mongo.db.users.insert_one(register)
 
@@ -107,8 +106,12 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+    business_id = mongo.db.business.find({"_id": mongo.db.users.find_one(
+        {"username": session["user"]})["business_id"]})
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", 
+        username=username, business_id=business_id)
 
     return redirect(url_for("login"))
 
