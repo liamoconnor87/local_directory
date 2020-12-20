@@ -76,6 +76,11 @@ def register():
 
         email_two = request.form.get("email2")
 
+        # verify password matches
+        password_one = request.form.get("password")
+
+        password_two = request.form.get("password2")
+
         if existing_user or existing_email:
             flash("Username/Email already exists")
             return redirect(url_for("register"))
@@ -84,12 +89,26 @@ def register():
             flash("Emails must match to verify")
             return redirect(url_for("register"))
 
-        register = {
+        elif password_one != password_two:
+            flash("Passwords must match to verify")
+            return redirect(url_for("register"))
+
+        register_business = {
+            "name": request.form.get("business_name"),
+            "website": request.form.get("website"),
+            "email": request.form.get("email").lower(),
+            "address": request.form.get("address"),
+            "category_name": request.form.get("business_type")
+        }
+        mongo.db.business.insert_one(register_business)
+
+        register_user = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "email": request.form.get("email").lower()
+            "business_id": register_business["_id"]
         }
-        mongo.db.users.insert_one(register)
+        
+        mongo.db.users.insert_one(register_user)
 
         # puts the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()

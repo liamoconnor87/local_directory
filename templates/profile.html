@@ -7,13 +7,17 @@
             <div class="card-panel">
                 <h3 class="center-align text-darken-4">{{ username }}'s Profile</h3>
 
-                {% for users_business in business_id %}
-                    {{ users_business.category_name }}<br>
-                    {{ users_business.name }}<br>
-                    {{ users_business.website }}<br>
-                    {{ users_business.email }}<br>
-                    {{ users_business.address }}<br>
-                {% endfor %}
+                {% if business_id %}
+                    {% for users_business in business_id %}
+                        {{ users_business.category_name }}<br>
+                        {{ users_business.name }}<br>
+                        {{ users_business.website }}<br>
+                        {{ users_business.email }}<br>
+                        {{ users_business.address }}<br>
+                    {% endfor %}
+                {% else %}
+                    <h1> This should appear if no business is set up </h1>
+                {% endif %}
                 
             </div>
         </div>
