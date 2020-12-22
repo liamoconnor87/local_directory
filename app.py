@@ -137,17 +137,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-# @app.route("/edit_info/<username>/<business_id>", methods=["GET","POST"])
-# def edit_info(business_id)
-    # username = mongo.db.users.find_one(
-        # {"username": session["user"]})["username"]
-
-    # business_id = mongo.db.business.find({"_id": mongo.db.users.find_one(
-        # {"username": session["user"]})["business_id"]})
-
-
-
-@app.route("/edit_info")
+@app.route("/edit_info", methods=["GET", "POST"])
 def edit_info():
     # retrieves categories of business from db
     categories = mongo.db.category.find().sort("name", 1)
