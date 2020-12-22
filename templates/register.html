@@ -39,12 +39,15 @@
                     </div>
                 </div>
                 <!-- type of business -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix"></i>
-                        <input id="business_type" name="business_type" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
-                        <label for="business_type">Type of Business</label>
-                    </div>
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose a type of business</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Type of Business</label>
                 </div>
                 <!-- website -->
                 <div class="row">

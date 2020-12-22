@@ -62,6 +62,9 @@ def login():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    # retrieves categories of business from db
+    categories = mongo.db.category.find().sort("name", 1)
+
     if request.method == "POST":
         # checks if username already exists in the db
         existing_user = mongo.db.users.find_one(
@@ -73,12 +76,10 @@ def register():
 
         # verify email matches
         email_one = request.form.get("email")
-
         email_two = request.form.get("email2")
 
         # verify password matches
         password_one = request.form.get("password")
-
         password_two = request.form.get("password2")
 
         if existing_user or existing_email:
@@ -100,6 +101,7 @@ def register():
             "address": request.form.get("address"),
             "category_name": request.form.get("business_type")
         }
+
         mongo.db.business.insert_one(register_business)
 
         register_user = {
@@ -115,7 +117,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("register.html")
+    return render_template("register.html", categories=categories)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -135,9 +137,22 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# @app.route("/edit_info/<username>/<business_id>", methods=["GET","POST"])
+# def edit_info(business_id)
+    # username = mongo.db.users.find_one(
+        # {"username": session["user"]})["username"]
+
+    # business_id = mongo.db.business.find({"_id": mongo.db.users.find_one(
+        # {"username": session["user"]})["business_id"]})
+
+
+
 @app.route("/edit_info")
 def edit_info():
-    return render_template("edit_info.html")
+    # retrieves categories of business from db
+    categories = mongo.db.category.find().sort("name", 1)
+
+    return render_template("edit_info.html", categories=categories)
 
 
 @app.route("/logout")
