@@ -145,8 +145,11 @@ def edit_info(edit_business):
     business_id = list(mongo.db.business.find_one(
         {"_id": ObjectId(edit_business)}))
 
-    return render_template("edit_info.html", 
-    categories=categories, business_id=business_id)
+    if session["user"]:
+        return render_template("edit_info.html", 
+        categories=categories, business_id=business_id)
+
+    return redirect(url_for("index"))
 
 
 @app.route("/logout")
