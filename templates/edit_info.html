@@ -5,7 +5,7 @@
     <h4 class="center-align">Edit your business information</h4>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_info') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_info', edit_business=business_id._id) }}">
             <div class="card-panel teal">
                 <!-- name of business -->
                 <div class="row">

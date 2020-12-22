@@ -127,8 +127,8 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    business_id = mongo.db.business.find({"_id": mongo.db.users.find_one(
-        {"username": session["user"]})["business_id"]})
+    business_id = list(mongo.db.business.find({"_id": mongo.db.users.find_one(
+        {"username": session["user"]})["business_id"]}))
 
     if session["user"]:
         return render_template("profile.html", 
@@ -137,12 +137,16 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/edit_info", methods=["GET", "POST"])
-def edit_info():
+@app.route("/edit_info/<edit_business>", methods=["GET", "POST"])
+def edit_info(edit_business):
     # retrieves categories of business from db
     categories = mongo.db.category.find().sort("name", 1)
 
-    return render_template("edit_info.html", categories=categories)
+    business_id = list(mongo.db.business.find_one(
+        {"_id": ObjectId(edit_business)}))
+
+    return render_template("edit_info.html", 
+    categories=categories, business_id=business_id)
 
 
 @app.route("/logout")
