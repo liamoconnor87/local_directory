@@ -107,7 +107,7 @@ def register():
             "password": generate_password_hash(request.form.get("password")),
             "business_id": register_business["_id"]
         }
-        
+
         mongo.db.users.insert_one(register_user)
 
         # puts the new user into 'session' cookie
@@ -133,6 +133,11 @@ def profile(username):
         username=username, business_id=business_id)
 
     return redirect(url_for("login"))
+
+
+@app.route("/edit_info")
+def edit_info():
+    return render_template("edit_info.html")
 
 
 @app.route("/logout")
