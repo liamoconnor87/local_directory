@@ -99,7 +99,7 @@ def register():
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": request.form.get("business_type")
+            "category_name": request.form.get("category_name")
         }
 
         mongo.db.business.insert_one(register_business)
