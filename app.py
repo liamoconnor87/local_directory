@@ -139,10 +139,39 @@ def profile(username):
 
 @app.route("/edit_info/<edit_business>", methods=["GET", "POST"])
 def edit_info(edit_business):
+    if request.method == "POST":
+
+        # checks if email already exists in the db
+        existing_email = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+
+        # verify email matches
+        email_one = request.form.get("email")
+        email_two = request.form.get("email2")
+
+        if email_one != email_two:
+            flash("Emails must match to verify")
+            return redirect(url_for("edit_info"))
+
+        update_business = {
+            "name": request.form.get("business_name"),
+            "website": request.form.get("website"),
+            "email": request.form.get("email").lower(),
+            "address": request.form.get("address"),
+            "category_name": request.form.get("category_name")
+        }
+
+        mongo.db.business.update(
+            {"_id": ObjectId(edit_business)},update_business)
+        flash("Business Information was updated!")
+        return redirect(url_for("profile", username=session["user"]))
+
     # retrieves categories of business from db
     categories = mongo.db.category.find().sort("name", 1)
+
     business_id = mongo.db.business.find_one(
         {"_id": ObjectId(edit_business)})
+
     user_business = mongo.db.users.find_one(
         {"username": session["user"]})["business_id"]
 
