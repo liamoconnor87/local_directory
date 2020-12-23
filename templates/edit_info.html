@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
-                        <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
+                        <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
                         <label for="business_name">Name of Business</label>
                     </div>
                 </div>
@@ -21,7 +21,10 @@
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose a type of business</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == task.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
                     <label>Type of Business</label>
@@ -30,7 +33,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
-                        <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
+                        <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.website }}" required>
                         <label for="website">Website</label>
                     </div>
                 </div>
@@ -38,7 +41,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-envelope prefix"></i>
-                        <input id="email" name="email" type="email" class="validate" required>
+                        <input id="email" name="email" type="email" class="validate" value="{{ business_id.email }}"  required>
                         <label for="email">Business Email</label>
                     </div>
                 </div>
@@ -53,7 +56,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
-                        <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
+                        <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.address }}"  required>
                         <label for="address">Address</label>
                     </div>
                 </div>
