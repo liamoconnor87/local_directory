@@ -160,8 +160,9 @@ def edit_info(edit_business):
 
         if current_email != email_input:
             if existing_email:
-                flash("Email is already exists.")
-                return redirect(url_for("edit_info", edit_business=edit_business))
+                flash("Email is already exists")
+                return redirect(url_for("edit_info", 
+                edit_business=edit_business))
 
         update_business = {
             "name": request.form.get("business_name"),
