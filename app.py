@@ -71,7 +71,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         # checks if email already exists in the db
-        existing_email = mongo.db.users.find_one(
+        existing_email = mongo.db.business.find_one(
             {"email": request.form.get("email").lower()})
 
         # verify email matches
@@ -142,8 +142,13 @@ def edit_info(edit_business):
     if request.method == "POST":
 
         # checks if email already exists in the db
-        existing_email = mongo.db.users.find_one(
+        existing_email = mongo.db.business.find_one(
             {"email": request.form.get("email").lower()})
+
+        current_email = mongo.db.business.find_one(
+            {"_id": ObjectId(edit_business)})["email"]
+
+        email_input = request.form.get("email").lower()
 
         # verify email matches
         email_one = request.form.get("email")
@@ -151,7 +156,12 @@ def edit_info(edit_business):
 
         if email_one != email_two:
             flash("Emails must match to verify")
-            return redirect(url_for("edit_info"))
+            return redirect(url_for("edit_info", edit_business=edit_business))
+
+        if current_email != email_input:
+            if existing_email:
+                flash("Email is already exists.")
+                return redirect(url_for("edit_info", edit_business=edit_business))
 
         update_business = {
             "name": request.form.get("business_name"),
@@ -162,7 +172,7 @@ def edit_info(edit_business):
         }
 
         mongo.db.business.update(
-            {"_id": ObjectId(edit_business)},update_business)
+            {"_id": ObjectId(edit_business)}, update_business)
         flash("Business Information was updated!")
         return redirect(url_for("profile", username=session["user"]))
 
