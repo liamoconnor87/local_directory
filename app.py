@@ -141,13 +141,15 @@ def profile(username):
 def edit_info(edit_business):
     # retrieves categories of business from db
     categories = mongo.db.category.find().sort("name", 1)
-
-    business_id = list(mongo.db.business.find_one(
-        {"_id": ObjectId(edit_business)}))
+    business_id = mongo.db.business.find_one(
+        {"_id": ObjectId(edit_business)})
+    user_business = mongo.db.users.find_one(
+        {"username": session["user"]})["business_id"]
 
     if session["user"]:
-        return render_template("edit_info.html", 
-        categories=categories, business_id=business_id)
+        if str(edit_business) == str(user_business):
+            return render_template("edit_info.html", 
+            categories=categories, business_id=business_id)
 
     return redirect(url_for("index"))
 
