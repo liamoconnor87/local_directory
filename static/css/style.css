@@ -1,5 +1,5 @@
 body{
-    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pointer{
@@ -14,7 +14,7 @@ body{
 /* Base.html */
 
 .logo{
-    width: 50%;
+    width: 40%;
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -26,6 +26,14 @@ body{
     display: block;
     width: 100%;
     text-align: center;
+}
+
+.title-banner h1{
+    font-family: 'Concert One', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-weight: 200;
 }
 
 .title-banner h4{
@@ -44,7 +52,7 @@ body{
     display:block;
     margin-left:auto;
     margin-right:auto;
-    font-size: 13px;
+    font-size: 11px;
     color: rgb(22, 50, 126);
 }
 
@@ -90,7 +98,6 @@ body{
     height: 30px;
     display:block;
     margin:auto;
-    font-family: 'Righteous', cursive;
     color: rgb(0, 0, 0);
     max-width: 700px;
     border: 2px solid black;
@@ -110,7 +117,6 @@ body{
 }
 
 .sub-btn{
-    font-family: 'Righteous', cursive;
     border: none;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -142,7 +148,7 @@ body{
 }
 
 .bus-results{
-    width: 50%;
+    width: 90%;
     margin: auto;
 }
 
