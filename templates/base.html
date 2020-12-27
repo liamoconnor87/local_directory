@@ -17,16 +17,6 @@
     <title>Local Directory</title>
 </head>
 <body>
-    <!-- Logo -->
-    <div class="logo-cont">
-        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/LOCAL-logo.svg')}}" alt="Local Directory" class="logo"></a>
-    </div>
-
-    <!-- Title -->
-    <div class="title-banner">
-        <h1><a href="{{ url_for('index') }}">Local Directory</a></h1>
-        <h4 class="title" >Support your Local Business</h4>
-    </div>
 
     <!-- Navigation Bar -->
     <nav class="nav-bar">
@@ -36,7 +26,7 @@
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register your business!</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </nav>

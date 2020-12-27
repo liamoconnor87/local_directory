@@ -2,7 +2,20 @@
 
 {% block content %}
 
-    <!-- Search Tool -->
+    <div class="header">
+
+        <!-- Logo -->
+        <div class="logo-cont">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/LOCAL-logo.svg')}}" alt="Local Directory" class="logo"></a>
+        </div>
+
+        <!-- Title -->
+        <div class="title-banner">
+            <h1><a href="{{ url_for('index') }}">Local Directory</a></h1>
+            <h4 class="title" >Support your Local Business</h4>
+        </div>
+
+        <!-- Search Tool -->
     <form class="search-tool" action="{{ url_for('search') }}" method="POST">
         <label for="query" class="enter-postcode">Enter Your Postcode</label>
         <input type="text" name="query" id="query" minlength="3" class="query-box" required>
@@ -11,6 +24,8 @@
             <button type="submit" class="sub-btn">Search</button>
         </div>
     </form>
+
+    </div>
 
     <section class="results-cont">
         {% if query %}
