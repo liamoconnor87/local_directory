@@ -13,14 +13,18 @@
     </form>
 
     <section class="results-cont">
-        <h2>Results for {{ query }}</h2>
-        <div class="business">
+        {% if query %}
+            <h2>Results for {{ query }}</h2>
+        {% endif %}
+        <div class="bus-results">
             {% for business in results %}
-                {{ business.name }}<br>
-                {{ business.category_name }}<br>
-                {{ business.website }}<br>
-                {{ business.email }}<br>
-                {{ business.address }}<br><br>
+                <div class="business">
+                    {{ business.name }}<br>
+                    {{ business.category_name }}<br>
+                    {{ business.website }}<br>
+                    {{ business.email }}<br>
+                    {{ business.address }}<br>
+                </div>
             {% endfor %}
         </div>
     </section>

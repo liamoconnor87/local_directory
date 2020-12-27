@@ -91,8 +91,9 @@ body{
     display:block;
     margin:auto;
     font-family: 'Righteous', cursive;
-    color: rgb(126, 126, 126);
+    color: rgb(0, 0, 0);
     max-width: 700px;
+    border: 2px solid black;
 }
 
 .search-btn{
@@ -137,10 +138,18 @@ body{
 
 .results-cont h2{
     color: rgb(126, 22, 22);
+    margin-bottom: 5px;
+}
+
+.bus-results{
+    width: 50%;
+    margin: auto;
 }
 
 .business{
-    padding: 20px;
+    padding: 15px 5px 25px 5px;
+    margin: 15px;
+    border: 3px solid black;
 }
 
 /* Smart Device Layout */
