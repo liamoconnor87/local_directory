@@ -1,24 +1,84 @@
 body{
-    background-color: aquamarine;
+    font-family: 'Righteous', cursive;
 }
 
-.logo{
-    width:200px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    color: darkblue;
-}
-
+/* Flash message */ 
 .flashes h2{
     line-height: 2;
 }
 
-.btn-small{
-    margin: 5px;
+/* Base.html */
+
+.logo{
+    width: 50%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    max-width: 240px;
 }
 
-.collapsible-header .col strong{
-    margin: 5px;
-    line-height: 42px;
+.title-banner{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.title-banner h4{
+    margin-top: 0;
+}
+
+.title-banner a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+.nav-bar{
+    text-align: center;
+    width: 100%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 13px;
+    color: rgb(22, 50, 126);
+}
+
+.nav-bar ul{
+    padding: 0;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.nav-bar li{
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Smart Device Layout */
+
+@media screen and (min-width: 340px){
+
+    .nav-bar{
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width: 800px){
+
+    .title-banner h1{
+        font-size: 45px;
+    }
+
+    .title-banner h4{
+        font-size: 20px;
+    }
+
 }
