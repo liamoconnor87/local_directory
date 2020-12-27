@@ -2,6 +2,10 @@ body{
     font-family: 'Righteous', cursive;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 /* Flash message */ 
 .flashes h2{
     line-height: 2;
@@ -59,6 +63,84 @@ body{
 .nav-bar a{
     text-decoration: none;
     color: inherit;
+}
+
+/* Search Tool */
+
+.search-tool{
+    width: 100%;
+    height: 100px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 20px;
+}
+
+.enter-postcode{
+    width: 50%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(100, 100, 100);
+}
+
+.query-box{
+    width: 90%;
+    height: 30px;
+    display:block;
+    margin:auto;
+    font-family: 'Righteous', cursive;
+    color: rgb(126, 126, 126);
+    max-width: 700px;
+}
+
+.search-btn{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.reset-btn{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.sub-btn{
+    font-family: 'Righteous', cursive;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    border: none;
+}
+
+.sub-btn:focus{
+    outline: none;
+}
+
+/* Results from Search */
+.results-cont{
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.results-cont h2{
+    color: rgb(126, 22, 22);
+}
+
+.business{
+    padding: 20px;
 }
 
 /* Smart Device Layout */

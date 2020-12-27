@@ -34,7 +34,7 @@ def index():
 def search():
     query = request.form.get("query")
     business = mongo.db.business.find({"$text": {"$search": query}})
-    return render_template("index.html", results=business)
+    return render_template("index.html", results=business, query=query)
 
 
 @app.route("/login", methods=["GET", "POST"])

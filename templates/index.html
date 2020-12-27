@@ -1,35 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
+
     <!-- Search Tool -->
-    <div class="row card-panel grey lighten-5">
-        <form action="{{ url_for('search') }}" method="POST" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Directory</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('index') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+    <form class="search-tool" action="{{ url_for('search') }}" method="POST">
+        <label for="query" class="enter-postcode">Enter Your Postcode</label>
+        <input type="text" name="query" id="query" minlength="3" class="query-box" required>
+        <div class="search-btn">
+            <a href="{{ url_for('index') }}" class="reset-btn pointer">Reset</a>
+            <button type="submit" class="sub-btn">Search</button>
+        </div>
+    </form>
 
-    <section class="center-align">
-        <h4>Extension works!</h4>
-
-        {% for business in results %}
-            {{ business.name }}<br>
-            {{ business.category_name }}<br>
-            {{ business.website }}<br>
-            {{ business.email }}<br>
-            {{ business.address }}<br><br>
-        {% endfor %}
+    <section class="results-cont">
+        <h2>Results for {{ query }}</h2>
+        <div class="business">
+            {% for business in results %}
+                {{ business.name }}<br>
+                {{ business.category_name }}<br>
+                {{ business.website }}<br>
+                {{ business.email }}<br>
+                {{ business.address }}<br><br>
+            {% endfor %}
+        </div>
     </section>
 
 {% endblock %}
