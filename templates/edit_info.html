@@ -2,21 +2,31 @@
 
 {% block content %}
 
-    <h4 class="center-align">Edit your business information</h4>
+    <div class="header header-2">
 
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_info', edit_business=business_id._id) }}">
-            <div class="card-panel teal">
+        <!-- Logo -->
+        <div class="logo-cont">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/LOCAL-logo_white.png')}}" alt="Local Directory" class="logo medium"></a>
+        </div>
+
+        <!-- Title -->
+        <div class="title-banner">
+            <h3 class="title" >Edit Business Information</h3>
+        </div>
+
+    </div>
+
+    <div class="login-cont">
+        <form class="login-form" method="POST" action="{{ url_for('edit_info', edit_business=business_id._id) }}">
+            
                 <!-- name of business -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix"></i>
-                        <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
-                        <label for="business_name">Name of Business</label>
-                    </div>
+                <div class="form-box">
+                    <label for="business_name">Name of Business</label><br>
+                    <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
                 </div>
-                <!-- type of business -->
-                <div class="input-field col s12">
+                
+                <!-- type of business 
+                <div class="form-box">
                     <i class="fas fa-user-plus prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose a type of business</option>
@@ -29,48 +39,40 @@
                         {% endfor %}
                     </select>
                     <label>Type of Business</label>
-                </div>
+                </div> -->
+
                 <!-- website -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix"></i>
-                        <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.website }}" required>
-                        <label for="website">Website</label>
-                    </div>
+                <div class="form-box">
+                    <label for="website">Website</label><br>
+                    <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.website }}" required>
                 </div>
+
                 <!-- email -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-envelope prefix"></i>
-                        <input id="email" name="email" type="email" class="validate" value="{{ business_id.email }}"  required>
-                        <label for="email">Business Email</label>
-                    </div>
+                <div class="form-box">
+                    <label for="email">Business Email</label><br>
+                    <input id="email" name="email" type="email" class="validate" value="{{ business_id.email }}"  required>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-envelope prefix"></i>
-                        <input id="email2" name="email2" type="email" class="validate" value="{{ business_id.email }}" required>
-                        <label for="email2">Verify Business Email</label>
-                    </div>
+                <div class="form-box">
+                    <label for="email2">Verify Business Email</label><br>
+                    <input id="email2" name="email2" type="email" class="validate" value="{{ business_id.email }}" required>
                 </div>
+
                 <!-- address -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix"></i>
-                        <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.address }}"  required>
-                        <label for="address">Address</label>
-                    </div>
+                <div class="form-box">
+                    <label for="address">Address</label><br>
+                    <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.address }}"  required>
                 </div>
+
                 <!-- update -->
-                <div class="row">
-                    <a href="{{ url_for('profile', username=session['user']) }}'" class="btn-large red">
+                <div class="search-btn">
+                    <a href="{{ url_for('profile', username=session['user']) }}'" class="reset-btn pointer">
                         Cancel
                     </a>
-                    <button type="submit" class="col s12 btn-large text-shadow">
-                        Update <i class="fas fa-sign-in-alt"></i>
+                    <button type="submit" class="sub-btn">
+                        Update
                     </button>
                 </div>
-            </div>
+            
         </form>
     </div>
 

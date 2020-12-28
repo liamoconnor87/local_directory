@@ -19,13 +19,13 @@
         <form class="login-form" method="POST" action="{{ url_for('login') }}">
             <!-- username -->
             <div class="form-box">
-                <label for="username">Username</label>
+                <label for="username">Username</label><br>
                 <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
             <!-- password -->
             <div class="form-box">
-                <label for="password">Password</label>
+                <label for="password">Password</label><br>
                 <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
