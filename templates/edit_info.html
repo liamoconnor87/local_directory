@@ -25,9 +25,9 @@
                     <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
                 </div>
                 
-                <!-- type of business 
+                <!-- type of business -->
                 <div class="form-box">
-                    <i class="fas fa-user-plus prefix"></i>
+                    <label>Type of Business</label>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose a type of business</option>
                         {% for category in categories %}
@@ -38,8 +38,7 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-                    <label>Type of Business</label>
-                </div> -->
+                </div>
 
                 <!-- website -->
                 <div class="form-box">
