@@ -61,9 +61,9 @@ body{
     padding-bottom: 50px;
 }
 
-.header.register{
+.header.header-2{
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
 }
 
 .logo{
@@ -91,6 +91,14 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 50px;
+    font-weight: 200;
+}
+
+.title-banner h3{
+    font-family: 'Concert One', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
     font-weight: 200;
 }
 
@@ -165,7 +173,7 @@ body{
     outline: none;
 }
 
-/* Results from Search */
+/* Results from Search / Profile */
 .results-cont{
     width: 100%;
     max-width: 800px;
@@ -180,15 +188,24 @@ body{
 }
 
 .bus-results{
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
 }
 
 .business{
+    width: inherit;
     padding: 15px 5px 25px 5px;
     margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 114, 76);
+}
+
+.cent-txt{
+    text-align: center;
 }
 
 /* Log In / Register */
@@ -217,7 +234,7 @@ body{
     background-color: rgb(0, 114, 76);
 }
 
-.link{
+.link, .link-2{
     text-align: center;
     padding: 10px 0;
     color: rgb(255, 255, 255);
@@ -225,6 +242,11 @@ body{
 
 .link a{
     text-decoration: underline;
+    color: inherit;
+}
+
+.link-2 a{
+    text-decoration: none;
     color: inherit;
 }
 
