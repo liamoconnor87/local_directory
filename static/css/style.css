@@ -14,9 +14,27 @@ body{
     cursor: pointer;
 }
 
-/* Flash message */ 
-.flashes h2{
-    line-height: 2;
+/* Flash message */
+.flashes{
+    display: block;
+    position: fixed;
+    margin-top: 47px;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.flashes h3{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.flashes a{
+    text-decoration: none;
 }
 
 /* Navigation Bar */
@@ -136,7 +154,7 @@ body{
     height: 30px;
     display:block;
     margin:auto;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     max-width: 700px;
     border: 8px solid rgb(255, 255, 255);
 }

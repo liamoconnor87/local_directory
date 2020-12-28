@@ -35,8 +35,9 @@
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align">{{ message }}</h4>
+                    <!-- Title -->
+                    <div class="flashes flsh-msg">
+                        <h3 class="pointer"><a href="{{ url_for('index') }}"></a>{{ message }}</a></h3>
                     </div>
                 {% endfor %}
             {% endif %}
