@@ -57,8 +57,13 @@ body{
 .header{
     width: 100%;
     background-color: rgb(0, 114, 76);
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.header.register{
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .logo{
@@ -68,6 +73,10 @@ body{
     margin-right:auto;
     margin-top: 20px;
     max-width: 240px;
+}
+
+.logo.medium{
+    width: 20%;
 }
 
 .title-banner{
@@ -94,7 +103,7 @@ body{
     color: inherit;
 }
 
-/* Search Tool */
+/* Search Tool / Some Log In & Register */
 
 .search-tool{
     width: 100%;
@@ -122,13 +131,14 @@ body{
     margin:auto;
     color: rgb(255, 255, 255);
     max-width: 700px;
-    border: 2px solid black;
+    border: 8px solid rgb(255, 255, 255);
 }
 
 .search-btn{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     text-align: center;
     padding: 5px;
 }
@@ -179,6 +189,50 @@ body{
     margin: 15px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 114, 76);
+}
+
+/* Log In / Register */
+
+.login-cont{
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form{
+    color: rgb(0, 114, 76);
+    padding-top: 35px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 20px;
+}
+
+.log-btn {
+   color: rgb(0, 114, 76); 
+}
+
+.link-cont{
+    background-color: rgb(0, 114, 76);
+}
+
+.link{
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+}
+
+.link a{
+    text-decoration: underline;
+    color: inherit;
+}
+
+.form-box{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 13px;
 }
 
 /* Smart Device Layout */
