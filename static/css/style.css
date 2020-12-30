@@ -128,7 +128,7 @@ body{
     color: inherit;
 }
 
-/* Search Tool / Some Log In & Register */
+/* Search Tool / Log In / Register */
 
 .search-tool{
     width: 100%;
@@ -310,6 +310,11 @@ body{
     height: 35px;
     padding-left: 5px;
 }
+
+.link-2 a.del-btn{
+    color: red;
+}
+
 
 /* Smart Device Layout */
 
