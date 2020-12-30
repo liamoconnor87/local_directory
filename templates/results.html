@@ -39,4 +39,28 @@
         </div>
     </form>
 
+    </div>
+
+    <section class="results-cont">
+        {% if results|length > 0 %}
+            {% if query %}
+                <h2>Results for {{ query }}</h2>
+            {% endif %}
+            
+            <div class="bus-results">
+                {% for business in results %}
+                    <div class="business">
+                        {{ business.name }}<br>
+                        {{ business.category_name }}<br>
+                        {{ business.website }}<br>
+                        {{ business.email }}<br>
+                        {{ business.address }}<br>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2>No Results :(</h2>
+        {% endif %}
+    </section>
+
 {% endblock %}
