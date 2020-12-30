@@ -17,8 +17,22 @@
 
         <!-- Search Tool -->
     <form class="search-tool" action="{{ url_for('search') }}" method="POST">
-        <label for="query" class="enter-postcode">Enter Your Postcode</label>
-        <input type="text" name="query" id="query" minlength="3" class="query-box" value="ss8" required>
+
+        <div class="row">
+
+            <div class="column srch-w-1">
+                <label for="query" class="business-type">What Business You Looking For?</label>
+                <input type="text" name="query" id="query" minlength="3" class="query-box" required>
+            </div>
+
+            <div class="column srch-w-2">
+                <label for="query2" class="enter-postcode">Enter Your Postcode</label>
+                <input type="text" name="query2" id="query2" minlength="3" class="query-box" value="ss8" required>
+            </div>
+
+        </div>
+
+
         <div class="search-btn">
             <a href="{{ url_for('index') }}" class="reset-btn pointer">Reset</a>
             <button type="submit" class="sub-btn">Search</button>

@@ -70,7 +70,7 @@ body{
     color: inherit;
 }
 
-/* Base.html */
+/* Base */
 
 .header{
     width: 100%;
@@ -133,27 +133,57 @@ body{
 .search-tool{
     width: 100%;
     height: 100px;
-    display:block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.column{
     margin-left:auto;
     margin-right:auto;
-    padding-top: 20px;
+    padding: 2px;
+}
+
+.srch-w-1{
+    width: 75%;
+}
+
+.srch-w-2{
+    width: 25%;
+}
+
+.business-type{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
 }
 
 .enter-postcode{
-    width: 50%;
-    display:block;
+    width: 100%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
     color: rgb(255, 255, 255);
     font-size: 10px;
 }
 
 .query-box{
-    width: 90%;
+    width: 100%;
     height: 30px;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
     color: rgb(0, 0, 0);
     max-width: 700px;
     border: 8px solid rgb(255, 255, 255);
