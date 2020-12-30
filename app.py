@@ -200,6 +200,22 @@ def edit_info(edit_business):
     return redirect(url_for("index"))
 
 
+@app.route("/delete_probus/<delete_business>")
+def delete_probus(delete_business):
+    # retrieves users ObjectID
+    user_id = mongo.db.users.find_one(
+        {"username": session["user"]})["_id"]
+
+    if session["user"]:
+        flash("Your Profile and Business have been removed from our database")
+        session.pop("user")
+        mongo.db.business.remove({"_id": ObjectId(delete_business)})
+        mongo.db.users.remove({"_id": ObjectId(user_id)})
+
+        return redirect(url_for("index"))
+
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookies

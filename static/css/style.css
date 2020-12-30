@@ -145,6 +145,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+    max-width: 800px;
 }
 
 .column{
@@ -255,7 +256,7 @@ body{
     text-align: center;
 }
 
-/* Log In / Register */
+/* Log In / Register / Profile */
 
 .login-cont{
     width: 100%;
