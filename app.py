@@ -39,35 +39,6 @@ def search():
     return render_template("results.html", results=business, query=query)
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        # checks if username exists in the db
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            # checks is password matches db
-            if check_password_hash(
-               existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
-
-            else:
-                # if password does not match
-                flash("Incorrect Username/Password")
-                return redirect(url_for("login"))
-
-        else:
-            # if username does not match
-            flash("Incorrect Username/Password")
-            return redirect(url_for("login"))
-
-    return render_template("login.html")
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # retrieves categories of business from db
@@ -128,6 +99,54 @@ def register():
     return render_template("register.html", categories=categories)
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # checks if username exists in the db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # checks is password matches db
+            if check_password_hash(
+               existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+
+                    if str(session["user"]) == "admin":
+                        return redirect(url_for("admin_page",
+                        admin_user=session["user"]))
+
+                    else:
+                        return redirect(url_for("profile",
+                        username=session["user"]))
+
+            else:
+                # if password does not match
+                flash("Incorrect Username/Password")
+                return redirect(url_for("login"))
+
+        else:
+            # if username does not match
+            flash("Incorrect Username/Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
+@app.route("/admin_page/<admin_user>", methods=["GET", "POST"])
+def admin_page(admin_user):
+
+    if str(session["user"]) == "admin":
+
+        admin_name = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
+        return render_template("admin_page.html", username=admin_name)
+
+    return redirect(url_for("index"))
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # retrieves session user's username from the db
@@ -142,7 +161,7 @@ def profile(username):
         return render_template("profile.html", 
         username=username, business_id=business_id)
 
-    return redirect(url_for("login"))
+    return redirect(url_for("index"))
 
 
 @app.route("/edit_info/<edit_business>", methods=["GET", "POST"])

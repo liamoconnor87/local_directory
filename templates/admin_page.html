@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="header header-2">
+
+        <!-- Logo -->
+        <div class="logo-cont">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/LOCAL-logo_white.png')}}" alt="Local Directory" class="logo"></a>
+        </div>
+
+        <!-- Title -->
+        <div class="title-banner">
+            <h1>IT WORKED!!!</h1>
+            <h3 class="title" >{{ username }}'s Profile</h3>
+        </div>
+
+    </div>
+                
+{% endblock %}
