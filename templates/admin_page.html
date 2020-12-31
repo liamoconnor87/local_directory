@@ -16,5 +16,23 @@
         </div>
 
     </div>
+
+        <div class="login-cont">
+        <form class="login-form" method="POST" action="{{ url_for('admin_page', admin_user=session['user']) }}">
+            <!-- add a business -->
+            <div class="form-box">
+                <label for="business-type">Add type of Business</label>
+                <input id="business-type" name="business-type" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
+            </div>
+
+            <!-- add button -->
+            <div class="search-btn">
+                <button type="submit" class="sub-btn">
+                    Add
+                </button>
+            </div>
+        </form>
+    </div>
+
                 
 {% endblock %}

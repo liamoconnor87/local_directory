@@ -142,6 +142,22 @@ def admin_page(admin_user):
         admin_name = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
 
+        if request.method == "POST":
+            exisitng_category = mongo.db.category.find_one(
+                {"category_name": request.form.get("business-type").lower()})
+
+            if exisitng_category:
+                flash("Category already exists")
+                return redirect(url_for("admin_page", 
+                admin_user=session["user"]))
+
+            add_category = {
+                "category_name": request.form.get("business-type").lower()
+            }
+            mongo.db.category.insert_one(add_category)
+            flash("Category added")
+            return redirect(url_for("admin_page", admin_user=session["user"]))
+
         return render_template("admin_page.html", username=admin_name)
 
     return redirect(url_for("index"))
