@@ -21,7 +21,11 @@
     <nav class="nav-bar">
         <ul>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                {% if session["user"] == "admin" %}
+                    <li><a href="{{ url_for('admin_page', admin_user=session['user']) }}">Admin</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
