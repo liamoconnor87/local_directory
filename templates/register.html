@@ -45,7 +45,7 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose a type of business</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
                     {% endfor %}
                 </select>
             </div>

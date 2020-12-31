@@ -73,12 +73,15 @@ def register():
             flash("Passwords must match to verify")
             return redirect(url_for("register"))
 
+        category_id = mongo.db.category.find_one(
+            {"category_name": request.form.get("category_name")})
+
         register_business = {
             "name": request.form.get("business_name"),
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": request.form.get("category_name")
+            "category_name": category_id["_id"]
         }
 
         mongo.db.business.insert_one(register_business)
@@ -207,12 +210,15 @@ def edit_info(edit_business):
                 return redirect(url_for("edit_info", 
                 edit_business=edit_business))
 
+        category_id = mongo.db.category.find_one(
+            {"category_name": request.form.get("category_name")})
+
         update_business = {
             "name": request.form.get("business_name"),
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": request.form.get("category_name")
+            "category_name": category_id["_id"]
         }
 
         mongo.db.business.update(
