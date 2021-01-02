@@ -43,7 +43,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # retrieves categories of business from db
-    categories = mongo.db.category.find().sort("name", 1)
+    categories = mongo.db.category.find().sort("category_name", 1)
 
     if request.method == "POST":
         # checks if username already exists in the db
