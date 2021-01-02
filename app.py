@@ -230,7 +230,7 @@ def edit_info(edit_business):
         return redirect(url_for("profile", username=session["user"]))
 
     # retrieves categories of business from db
-    categories = mongo.db.category.find().sort("name", 1)
+    categories = mongo.db.category.find().sort("category_name", 1)
 
     business_id = mongo.db.business.find_one(
         {"_id": ObjectId(edit_business)})
