@@ -74,16 +74,12 @@ def register():
             flash("Passwords must match to verify")
             return redirect(url_for("register"))
 
-        category_id = mongo.db.category.find_one(
-            {"category_name": request.form.get("category_name")})
-
         register_business = {
             "name": request.form.get("business_name"),
-            "category_name": category_id["category_name"],
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_id": category_id["_id"]
+            "category_name": request.form.get("category_name")
         }
 
         mongo.db.business.insert_one(register_business)
@@ -187,6 +183,9 @@ def profile(username):
 
 @app.route("/edit_info/<edit_business>", methods=["GET", "POST"])
 def edit_info(edit_business):
+    # retrieves categories of business from db
+    categories = mongo.db.category.find().sort("category_name", 1)
+
     if request.method == "POST":
 
         # checks if email already exists in the db
@@ -206,22 +205,18 @@ def edit_info(edit_business):
             flash("Emails must match to verify")
             return redirect(url_for("edit_info", edit_business=edit_business))
 
-        if current_email != email_input:
+        elif current_email != email_input:
             if existing_email:
                 flash("Email is already exists")
                 return redirect(url_for("edit_info", 
                 edit_business=edit_business))
 
-        category_id = mongo.db.category.find_one(
-            {"category_name": request.form.get("category_name")})
-
         update_business = {
             "name": request.form.get("business_name"),
-            "category_name": category_id["category_name"],
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_id": category_id["_id"]
+            "category_name": request.form.get("category_name")
         }
 
         mongo.db.business.update(
@@ -229,9 +224,6 @@ def edit_info(edit_business):
 
         flash("Business Information was updated!")
         return redirect(url_for("profile", username=session["user"]))
-
-    # retrieves categories of business from db
-    categories = mongo.db.category.find().sort("category_name", 1)
 
     business_id = mongo.db.business.find_one(
         {"_id": ObjectId(edit_business)})
