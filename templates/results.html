@@ -50,6 +50,7 @@
             <div class="bus-results">
                 {% for business in results %}
                     <div class="business">
+                        {{ business.category_name }}<br>
                         {{ business.name }}<br>
                         {{ business.website }}<br>
                         {{ business.email }}<br>

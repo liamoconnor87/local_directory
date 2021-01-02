@@ -29,12 +29,12 @@
                 <div class="form-box">
                     <label>Type of Business</label>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose a type of business</option>
+                        <option value="{{ business_id.category_name }}" disabled selected>{{ business_id.category_name }}</option>
                         {% for category in categories %}
                             {% if category.category_name == business_id.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name.capitalize() }}</option>
+                                <option value="" selected>{{ business_id.category_name }}</option>
                             {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
+                                <option value="">{{ category.category_name }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>

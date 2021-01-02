@@ -19,7 +19,7 @@
     <div class="bus-results">
         {% for users_business in business_id %}
             <div class="business cent-txt">
-                <br>
+                {{ users_business.category_name }}<br>
                 {{ users_business.name }}<br>
                 {{ users_business.website }}<br>
                 {{ users_business.email }}<br>

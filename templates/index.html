@@ -39,4 +39,20 @@
         </div>
     </form>
 
+    <section class="results-cont">
+            
+        <div class="bus-results">
+            {% for business in results %}
+                <div class="business">
+                    {{ business.category_name }}<br>
+                    {{ business.name }}<br>
+                    {{ business.website }}<br>
+                    {{ business.email }}<br>
+                    {{ business.address }}<br>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
 {% endblock %}

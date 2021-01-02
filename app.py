@@ -27,7 +27,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    local_business = list(mongo.db.business.find())
+    return render_template("index.html", results=local_business)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -78,10 +79,11 @@ def register():
 
         register_business = {
             "name": request.form.get("business_name"),
+            "category_name": category_id["category_name"],
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": category_id["_id"]
+            "category_id": category_id["_id"]
         }
 
         mongo.db.business.insert_one(register_business)
@@ -155,7 +157,7 @@ def admin_page(admin_user):
                 admin_user=session["user"]))
 
             add_category = {
-                "category_name": request.form.get("business-type").lower()
+                "category_name": request.form.get("business-type")
             }
             mongo.db.category.insert_one(add_category)
             flash("Category added")
@@ -215,10 +217,11 @@ def edit_info(edit_business):
 
         update_business = {
             "name": request.form.get("business_name"),
+            "category_name": category_id["category_name"],
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": category_id["_id"]
+            "category_id": category_id["_id"]
         }
 
         mongo.db.business.update(
