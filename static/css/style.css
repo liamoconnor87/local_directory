@@ -51,6 +51,7 @@ body{
     background-color: rgba(255, 255, 255, .7);
     position: fixed;
     top: 0;
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.7);
 }
 
 .nav-bar ul{
@@ -68,6 +69,10 @@ body{
 .nav-bar a{
     text-decoration: none;
     color: inherit;
+}
+
+.nav-bar a:hover{
+    text-decoration: underline;
 }
 
 /* Base */
@@ -89,7 +94,10 @@ body{
     margin-left:auto;
     margin-right:auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     max-width: 240px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .logo.medium{
@@ -101,6 +109,7 @@ body{
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .title-banner h1{
@@ -120,7 +129,7 @@ body{
 }
 
 .title-banner h4{
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .title-banner a{
@@ -128,15 +137,20 @@ body{
     color: inherit;
 }
 
+
 /* Search Tool / Log In / Register */
 
 .search-tool{
     width: 100%;
-    height: 100px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 .row{
     display: flex;
@@ -144,7 +158,7 @@ body{
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 90%;
     max-width: 800px;
 }
 
@@ -194,31 +208,50 @@ body{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
-    padding: 5px;
+    padding: 5px 5px 10px 5px;
 }
 
 .reset-btn{
     text-decoration: none;
+    color: rgb(0, 114, 76);
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 3px solid rgb(0, 114, 76);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.reset-btn:hover{
+    background-color: rgb(0, 114, 76);
     color: rgb(255, 255, 255);
 }
 
 .sub-btn{
     border: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 114, 76);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
-    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 3px solid rgb(0, 114, 76);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .sub-btn:focus{
     outline: none;
+}
+
+.sub-btn:hover{
+    background-color: rgb(0, 114, 76);
+    color: rgb(255, 255, 255);
 }
 
 /* Results from Search / Profile */
@@ -239,7 +272,7 @@ body{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .business{
@@ -250,6 +283,8 @@ body{
     margin-right: auto;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 114, 76);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .cent-txt{
@@ -272,6 +307,8 @@ body{
     margin: auto;
     background-color: rgba(255, 255, 255, .7);
     padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .log-btn {
@@ -279,7 +316,7 @@ body{
 }
 
 .link-cont{
-    background-color: rgb(0, 114, 76);
+    background-color: rgba(0, 114, 76, 0));
 }
 
 .link, .link-2{
@@ -314,7 +351,6 @@ body{
 .link-2 a.del-btn{
     color: red;
 }
-
 
 /* Smart Device Layout */
 

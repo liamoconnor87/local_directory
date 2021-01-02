@@ -11,13 +11,12 @@
 
         <!-- Title -->
         <div class="title-banner">
-            <h1>IT WORKED!!!</h1>
             <h3 class="title" >{{ username }}'s Profile</h3>
         </div>
 
     </div>
 
-        <div class="login-cont">
+    <div class="login-cont">
         <form class="login-form" method="POST" action="{{ url_for('admin_page', admin_user=session['user']) }}">
             <!-- add a business -->
             <div class="form-box">
