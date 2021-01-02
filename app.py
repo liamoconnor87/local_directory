@@ -226,6 +226,7 @@ def edit_info(edit_business):
 
         mongo.db.business.update(
             {"_id": ObjectId(edit_business)}, update_business)
+
         flash("Business Information was updated!")
         return redirect(url_for("profile", username=session["user"]))
 
