@@ -18,19 +18,20 @@ body{
 .flashes{
     display: block;
     position: fixed;
-    margin-top: 47px;
+    margin-top: 57px;
     width: 100%;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 114, 76);
 }
 
 .flashes h3{
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 0;
+    background-color: rgb(0, 0, 0);
 }
 
 .flashes a{
@@ -43,15 +44,23 @@ body{
     height: 50px;
     width: 100%;
     display: block;
+    font-size: 12px;
     margin-left: auto;
     margin-right: 0;
-    font-size: 11px;
-    font-weight: 800;
     color: rgb(0, 114, 76);
     background-color: rgba(255, 255, 255, .7);
     position: fixed;
     top: 0;
-    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar h1{
+    position: fixed;
+    font-family: 'Concert One', cursive;
+    font-weight: 200;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    padding-top: 8px;
+    padding-left: 8px;
 }
 
 .nav-bar ul{
@@ -71,7 +80,7 @@ body{
     color: inherit;
 }
 
-.nav-bar a:hover{
+.options a:hover{
     text-decoration: underline;
 }
 
@@ -93,7 +102,7 @@ body{
     display:block;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
     max-width: 240px;
     border-radius: 50%;
@@ -101,7 +110,7 @@ body{
 }
 
 .logo.medium{
-    width: 20%;
+    width: 30%;
 }
 
 .title-banner{
@@ -129,7 +138,7 @@ body{
 }
 
 .title-banner h4{
-    margin: 10px 0;
+    margin: 10px 0 20px;
 }
 
 .title-banner a{
@@ -371,9 +380,17 @@ body{
 @media screen and (min-width: 340px){
 
     .nav-bar{
-        font-size: 17px;
+        font-size: 15px;
     }
 
+}
+
+@media screen and (min-width: 500px){
+
+    .nav-bar{
+        font-size: 17px;
+        font-weight: 800;
+    }
 }
 
 @media screen and (min-width: 800px){
