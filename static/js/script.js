@@ -15,4 +15,7 @@ $(document).ready(function(){
         $(".del-dsply").hide()
     })
 
+    // Flash Messsage Animation
+    $(".flashes").fadeOut(8000);
+
   });

@@ -18,20 +18,19 @@ body{
 .flashes{
     display: block;
     position: fixed;
-    margin-top: 57px;
+    margin-top: 54px;
     width: 100%;
     text-align: center;
-    color: rgb(0, 114, 76);
+    color: rgb(255, 255, 255);
 }
 
 .flashes h3{
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 600;
-    padding: 3px 0;
-    background-color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flashes a{
