@@ -84,7 +84,6 @@ body{
 }
 
 /* Base */
-
 .header{
     width: 100%;
     background-color: rgb(0, 114, 76);
@@ -147,7 +146,6 @@ body{
 
 
 /* Search Tool / Log In / Register */
-
 .search-tool{
     width: 100%;
     height: auto;
@@ -310,12 +308,29 @@ body{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
+.business h5{
+    padding-bottom: 5px;
+}
+
+.business h1{
+    padding-bottom: 3px;
+}
+
+.business a{
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 3px;
+}
+
+.business a:hover{
+    text-decoration: underline;
+}
+
 .cent-txt{
     text-align: center;
 }
 
 /* Log In / Register */
-
 .login-cont{
     width: 100%;
     max-width: 360px;
@@ -376,7 +391,6 @@ body{
 }
 
 /* Profile */
-
 .del-dsply{
     display: none;
     position: fixed;
@@ -407,7 +421,6 @@ body{
 }
 
 /* Smart Device Layout */
-
 @media screen and (min-width: 340px){
 
     .flashes h3{
