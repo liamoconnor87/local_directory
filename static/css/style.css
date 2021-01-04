@@ -147,6 +147,7 @@ body{
 
 /* Search Tool / Log In / Register */
 .search-tool{
+    opacity: 0;
     width: 100%;
     height: auto;
     display: block;
@@ -332,6 +333,7 @@ body{
 
 /* Log In / Register */
 .login-cont{
+    opacity: 0;
     width: 100%;
     max-width: 360px;
     margin-left: auto;
