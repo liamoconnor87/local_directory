@@ -292,6 +292,7 @@ body{
 }
 
 .bus-results{
+    opacity: 0;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -373,6 +374,37 @@ body{
 
 .link-2 a.del-btn{
     color: red;
+}
+
+/* Profile */
+
+.del-dsply{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, .75);
+}
+
+.del-warn{
+    display: block;
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    background-color: rgb(1, 95, 64);
+    border-radius: 5px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.del-warn h3, .del-warn p{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.warning{
+    color: rgb(255, 255, 255);
 }
 
 /* Smart Device Layout */

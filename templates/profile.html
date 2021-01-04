@@ -2,6 +2,25 @@
 
 {% block content %}
 
+    <div class="del-dsply">
+        <div class="del-warn">
+            <h3 class="warning">Are you sure?</h3>
+            <p class="warning">
+                By confirming, your Profile and Business will be removed from The Local Directory Data base.
+            </p>
+            <div class="search-btn">
+                {% for users_business in business_id %}
+                    <p class="sub-btn ed-btn pointer cancel">
+                        Cancel
+                    </p>
+                    <a href="{{ url_for('delete_probus', delete_business=users_business._id) }}" class="sub-btn del-btn">
+                        Yes, Delete ME!
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <div class="header header-2">
 
         <!-- Logo -->
@@ -33,9 +52,9 @@
             <a href="{{ url_for('edit_info', edit_business=users_business._id) }}" class="sub-btn ed-btn pointer">
                 Update your Business Information
             </a>
-            <a href="{{ url_for('delete_probus', delete_business=users_business._id) }}" class="sub-btn del-btn">
+            <p class="sub-btn del-btn delete">
                 Delete Profile and Business Information
-            </a>
+            </p>
         {% endfor %}
     </div>
                 
