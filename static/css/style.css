@@ -27,7 +27,7 @@ body{
 .flashes h3{
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -410,6 +410,10 @@ body{
 
 @media screen and (min-width: 340px){
 
+    .flashes h3{
+        font-size: 18px;
+    }
+
     .nav-bar{
         font-size: 15px;
     }
@@ -417,6 +421,10 @@ body{
 }
 
 @media screen and (min-width: 500px){
+
+    .flashes h3{
+        font-size: 25px;
+    }
 
     .nav-bar{
         font-size: 17px;
