@@ -10,6 +10,7 @@ $(document).ready(function(){
         $(".del-dsply").show()
     })
 
+    // Cancel Delete function
     $(".cancel").click(function(){
         $(".del-dsply").hide()
     })
