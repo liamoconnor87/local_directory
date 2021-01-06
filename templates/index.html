@@ -50,10 +50,10 @@
                         <h1>{{ business.name }}</h1>
                         <a href="{{ business.website }}" target="_blank" rel="noopener noreferrer">{{ business.website }}</a><br>
                         <a href="mailto: {{ business.email }}">{{ business.email }}</a><br>
-                        {{ business.address }}<br>
+                        <p>{{ business.address }}</p>
                     </div>
                 </div>
-                
+
             {% endfor %}
         </div>
 

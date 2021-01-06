@@ -151,8 +151,7 @@ body{
     width: 100%;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 15px auto;
     padding-top: 20px;
     max-width: 900px;
     background-color: rgba(255, 255, 255, .7);
@@ -301,8 +300,8 @@ body{
 .bus-card{
     display: inline-block;
     flex: 100%;
-    max-width: 100%;
-    margin: 15px auto;
+    max-width: 450px;
+    margin: 0px auto 15px auto;
 }
 
 .business{
@@ -325,6 +324,11 @@ body{
     text-decoration: none;
     color: inherit;
     padding-bottom: 3px;
+    font-size: 14px;
+}
+
+.business p{
+    font-size: 14px;
 }
 
 .business a:hover{
@@ -439,6 +443,12 @@ body{
 
 }
 
+@media screen and (min-width: 400px){
+    .buisness a, .nusiness p{
+        font-size: 16px;
+    }
+}
+
 @media screen and (min-width: 500px){
 
     .flashes h3{
@@ -448,6 +458,18 @@ body{
     .nav-bar{
         font-size: 17px;
         font-weight: 800;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .business{
+        margin: 0 5px;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .bus-card{
+        flex: 50%;
     }
 }
 
