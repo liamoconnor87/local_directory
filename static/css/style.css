@@ -294,15 +294,19 @@ body{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bus-card{
+    display: inline-block;
+    flex: 100%;
+    max-width: 100%;
+    margin: 15px auto;
 }
 
 .business{
-    width: inherit;
     padding: 15px 5px 25px 5px;
-    margin: 15px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 114, 76);
     border-radius: 20px;
