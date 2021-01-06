@@ -335,10 +335,6 @@ body{
     text-decoration: underline;
 }
 
-.cent-txt{
-    text-align: center;
-}
-
 /* Log In / Register */
 .login-cont{
     opacity: 0;
@@ -401,6 +397,10 @@ body{
 }
 
 /* Profile */
+.cent-txt{
+    text-align: center;
+}
+
 .del-dsply{
     display: none;
     position: fixed;
