@@ -74,12 +74,16 @@ def register():
             flash("Passwords must match to verify")
             return redirect(url_for("register"))
 
+        category_id = mongo.db.category.find_one(
+            {"category_name": request.form.get("category_name")})
+
         register_business = {
             "name": request.form.get("business_name"),
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": request.form.get("category_name")
+            "category_name": category_id["category_name"],
+            "category_id": category_id["_id"]
         }
 
         mongo.db.business.insert_one(register_business)
@@ -211,12 +215,22 @@ def edit_info(edit_business):
                 return redirect(url_for("edit_info", 
                 edit_business=edit_business))
 
+        # retrieves current category id from business to remove it
+        current_category_id = mongo.db.business.find_one(
+            {"_id": ObjectId(edit_business)})
+
+        current_category_id.pop("category_id")
+
+        category_id = mongo.db.category.find_one(
+            {"category_name": request.form.get("category_name")})
+
         update_business = {
             "name": request.form.get("business_name"),
             "website": request.form.get("website"),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
-            "category_name": request.form.get("category_name")
+            "category_name": category_id["category_name"],
+            "category_id": category_id["_id"]
         }
 
         mongo.db.business.update(
@@ -254,14 +268,12 @@ def delete_probus(delete_business):
         return redirect(url_for("index"))
 
 
-
 @app.route("/logout")
 def logout():
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("index"))
-
 
 
 # Change debug to FALSE once app is complete
