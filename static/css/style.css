@@ -328,11 +328,15 @@ body{
 }
 
 .business p{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .business a:hover{
     text-decoration: underline;
+}
+
+.address{
+    text-transform: capitalize;
 }
 
 /* Log In / Register */
