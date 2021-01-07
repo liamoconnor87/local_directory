@@ -153,7 +153,7 @@ def admin_page(admin_user):
 
             if exisitng_category:
                 flash("Category already exists")
-                return redirect(url_for("admin_page",
+                return redirect(url_for("admin_page", 
                 admin_user=session["user"]))
 
             add_category = {
