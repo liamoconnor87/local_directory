@@ -79,7 +79,7 @@ def register():
 
         register_business = {
             "name": request.form.get("business_name"),
-            "website": request.form.get("website"),
+            "website": request.form.get("website").lower(),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
             "category_name": category_id["category_name"],
@@ -226,7 +226,7 @@ def edit_info(edit_business):
 
         update_business = {
             "name": request.form.get("business_name"),
-            "website": request.form.get("website"),
+            "website": request.form.get("website").lower(),
             "email": request.form.get("email").lower(),
             "address": request.form.get("address"),
             "category_name": category_id["category_name"],
