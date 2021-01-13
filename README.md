@@ -304,11 +304,12 @@ Creating both **requirements.txt** and **Procfile** you should now be able to su
 ----------
 >12. Configurations needed in your app.py or env.py files will need to be added in the **Config Vars** section located in the **Settings** tab on your dashboard.
 For this app -
-IP
-MONGO_DBNAME
-MONGO_URI
-PORT
-SECRET_KEY
+
+- IP
+- MONGO_DBNAME
+- MONGO_URI
+- PORT
+- SECRET_KEY
 
 >13. You should now be able to view and use the Local Directory app - https://local-directory.herokuapp.com/ **HAZAR!** 
 
