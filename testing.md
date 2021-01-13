@@ -9,7 +9,9 @@ Testing
 
 Steps taken - 
 >Go to the Local Directory App Website - https://local-directory.herokuapp.com
+
 >Observe that the Naivgation Bar is at the top of the page. 
+
 >Navigate the site to confirm the navigation bar is displayed. 
 
 
@@ -18,21 +20,34 @@ Steps taken -
 - When the User, clicks on Register link in the navigation bar, the User should be redirected to the Register page. 
 
 This testing also applies to these User Stories - 
+
 ***As a User, I would like the Navigation Bar to take me to the Log In page.***
+
 ***As a User, I would like the Navigation Bar to take me to Index page.***
+
 ***As a User, I would like the Local Directory logo to take me to the Index page.***
+
 ***As a User, I would like the Navigation Bar to take me to my Profile page, once I am logged in.***
+
 ***As a User, I would like the Navigation Bar to allow me to log out of my Profile on the App.***
+
 ***As a User, I would like a flash message that tells me I have successfully been logged out.***
 
 Steps taken - 
 >Click on the Register link on the navigation bar.
+
 >Observe that the link takes you to the Register page.
+
 >Repeat for the Log In link.
+
 >Repeat for the Index link by clicking the 'Local Directory' title in the navigation bar.
+
 >Repeat for the Index link by clicking the Local Directory logo below the navigation bar.
+
 >Repeat for the Profile link.
+
 >Repeat for the Log Out link.
+
 >Observe the app redirects me to the Index Page and a flash message appears confirming logging out was successful. 
 
 
@@ -45,20 +60,31 @@ Steps taken -
 - Hovering over the each button, changes its appearance. Combinations of Green and White.
 - Clicking Search the business cards will be displayed underneath the search tool in relevant order.  
 
-This testing also applies to these User Stories - 
+This testing also applies to these User Stories -
+
 ***As a User, I would like a Search Button so I can search the database.***
+
 ***As a User, I would like there to be a reset button on the search tool, should I want to start my search again.***
+
 ***As a User, once I have clicked search, I would like the relevant businesses to be displayed for me to view on a business card.***
 
 Steps taken - 
 >Observe that the search tool is available on the index page.
+
 >Type a business type in the first input field.
+
 >Type a post code in the second input field.
+
 >Move mouse over the 'Search' button and observe it changes colour. 
+
 >Move mouse over the 'Cancel' button and observe it changes colour.
+
 >Cick the 'Search' button and observe the relevant businesses being displayed. 
+
 >Observe that the search toll is available on the results page. 
+
 >Click the 'Reset' button to confirm the search has been reset. 
+
 
  
 *As a User, I would like to be able to click on the website link on the business cards.*
@@ -68,11 +94,14 @@ Steps taken -
 - Clicking on the website will redirect the user to that website on another page.
 
 This testing also applies to this User Story-
+
 ***As a User, I would like to be able to click on the email link on the business cards.***
 
 Steps taken - 
 >Move mouse over the website link and observe the address is underlined. 
+
 >Click on the website link and observe you are redirected to that website on another page.
+
 >Repeat this for the email link. This should prompt your device to try and compose an email. 
 
 
@@ -90,24 +119,40 @@ Steps taken -
 - Flash message is displayed on the Profile page that Registration was successful. 
 
 This testing also applies to these User Stories -
+
 ***As a User, when I am registering I would like a flash message to show if a username already exists on the databse.***
+
 ***As a User, when I am registering I would like a flash message to show if the passwords dont match when I verify.*** 
+
 ***As a User, when I am registering I would like a flash message to show if an email already exists on the database.*** 
+
 ***As a User, when I am registering I would like a flash message to show if the emails dont match when I verify.***  
+
 ***As a User, I would like a flash message that tells me I have successfully registered.***
+
 ***As a User, I would like a convienent link at the bottom of the Register page, that takes me to the Log In page, incase I have mistakenly clicked the wrong link.*** 
+
 ***As a User, Once I am registered I would like a Profile page specific to me.***
 
 Steps taken - 
+
 >Go to the Register Page.
+
 >Fill in the form.
+
 >Move mouse over the 'Register' button and observe it changes colour.
+
 >Observe a prompt to complete the form if an input field is empty upon clicking 'Register'.
+
 >Observe a flash message appears when a username already exists upon clicking 'Register'.
+
 >Observe a flash message appears when a email already exists upon clicking 'Register'.
 >Observe a flash message appears when the passwords dont match for verification upon clicking 'Register'.
+
 >Observe a flash message appears when the emails dont match for verification upon clicking 'Register'.
+
 >Upon filling the register form correctly, click the 'Register' button and observe the app redirects the User to their personal Profile page. 
+
 >Observe a flash message confirming registration was successful. 
 
 *As a User, I would like to be able to Log In to my profile on the app.*
@@ -122,16 +167,24 @@ Steps taken -
 - Flash message is displayed on the Profile page that Log In was successful.
 
 This testing also applies to these User Stories -
+
 ***As a User, when I am logging in, I would like a flash message to show if the username or password doesnt match on the database.***
+
 ***As a User, I would like a flash message to show I have successfully Logged In.***
 
 Steps taken - 
 >Go to the Log In Page.
+
 >Fill in the form.
+
 >Move mouse over the 'Log In' button and observe it changes colour.
+
 >Observe a prompt to complete the form if an input field is empty upon clicking 'Log In'.
+
 >Observe a flash message appears when a username or password doesnt match upon clicking 'Log In'.
+
 >Upon filling the log in form correctly, click the 'Log In' button and observe the app redirects the User to their personal Profile page. 
+
 >Observe a flash message confirming logging in was successful. 
 
 
@@ -155,33 +208,58 @@ Steps taken -
 - Clicking the 'Cancel' button redirects the User back to the Profile page. Business Information unchanged.
 
 This testing also applies to these User Stories -
+
 ***As a User, I would like to be able to Update my business information on my Profile page.***
+
 ***As a User, I would like a Cancel Button incase I dont want to Update my business information.*** 
+
 ***As a User, I would like a flash message that tells me I have successfully updated my information.***
+
 ***As a User, I would like to be able to Delete my Business and Profile from the database.*** 
+
 ***As a User, I would like the app to check 'Are you sure?' before deleting, incase I dont want to.*** 
+
 ***As a User, I would like a flash message that tells me I have successfully been removed from the database.***
 
 Steps taken - 
+
 >Observe the Users business is displayed on the Profile page.
 >Move mouse over the 'Update your Business Information' button and observe it changes colour. 
+
 >Move mouse over the 'Delete Profile and Business Information' button and observe it chnages colour.
+
 >Click on the 'Update your Business Information' button and observe it redirects you to the Edit Information page.
+
 >Observe the Edit Information form is displayed. 
+
 >Move mouse over the 'Update' button and observe it changes colour.
+
 >Move mouse over the 'Cancel' button and observe it changes colour.
+
 >Observe the pre exisiting information has filled the form.
+
 >Observe a prompt to complete the form if an input field is empty upon clicking 'Update'.
+
 >Observe a flash message appears when a email already exists upon clicking 'Update'.
+
 >Observe a flash message appears when the emails dont match for verification upon clicking 'Update'.
+
 >Click the 'Update' button, observe the user has been redirected back to their Profile page, and that the information has been updated.
+
 >Observe a flash message confirming the information has been updated.
+
 >Navigate to Edit Information page. Click the 'Cancel' button, observe the user has been redirected to the Profile page and no business information has been changed.
+
 >Click the 'Delete Profile and Business Information' button and observe the 'Are you sure?' Modal appears. 
+
 >Move mouse over the 'Cancel' button and observe it changes colour.
+
 >Move mouse over the 'Yes, Delete Me!' button and observe it changes colour.
+
 >Click the 'Cancel' button to confirm the Modal disappears and User is back on their Profile page.
+
 >Click the 'Yes, Delete Me!' button. Observe the User and Business be deleted. User redirected to the index page.
+
 >Observe a flash message confirming User and Business have successfully been deleted. 
 
 **Browser Compatibility**
