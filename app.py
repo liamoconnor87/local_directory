@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -120,11 +120,11 @@ def login():
 
                     if str(session["user"]) == "admin":
                         return redirect(url_for("admin_page",
-                        admin_user=session["user"]))
+                                        admin_user=session["user"]))
 
                     else:
                         return redirect(url_for("profile",
-                        username=session["user"]))
+                                        username=session["user"]))
 
             else:
                 # If password does not match
@@ -154,7 +154,7 @@ def admin_page(admin_user):
             if exisitng_category:
                 flash("Category already exists")
                 return redirect(url_for("admin_page",
-                admin_user=session["user"]))
+                                admin_user=session["user"]))
 
             add_category = {
                 "category_name": request.form.get("business-type")
@@ -178,8 +178,8 @@ def profile(username):
         {"username": session["user"]})["business_id"]}))
 
     if session["user"]:
-        return render_template("profile.html", 
-        username=username, business_id=business_id)
+        return render_template(
+            "profile.html", username=username, business_id=business_id)
 
     return redirect(url_for("index"))
 
@@ -211,8 +211,8 @@ def edit_info(edit_business):
         elif current_email != email_input:
             if existing_email:
                 flash("Email is already exists")
-                return redirect(url_for("edit_info", 
-                edit_business=edit_business))
+                return redirect(url_for("edit_info",
+                                edit_business=edit_business))
 
         # Retrieves current category id from business to remove it
         current_category_id = mongo.db.business.find_one(
@@ -246,8 +246,9 @@ def edit_info(edit_business):
 
     if session["user"]:
         if str(edit_business) == str(user_business):
-            return render_template("edit_info.html", 
-            categories=categories, business_id=business_id)
+            return render_template(
+                "edit_info.html",
+                categories=categories, business_id=business_id)
 
     return redirect(url_for("index"))
 
@@ -277,4 +278,5 @@ def logout():
 
 # Change debug to FALSE for debugging
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=False)
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")), debug=False)
