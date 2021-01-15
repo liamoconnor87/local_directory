@@ -13,6 +13,7 @@ Steps taken -
 >Observe that the Naivgation Bar is at the top of the page. 
 
 >Navigate the site to confirm the navigation bar is displayed. 
+![image](README_files/images/navbar.png)
 
 
 *As a User, I would like the Navigation Bar to take me to the Register page.*
@@ -53,6 +54,7 @@ Steps taken -
 
 *As a User, I would like a Search Tool, so I can search the database for a specific business in my area.*
 ------
+![image](README_files/images/searchtool.png)
 - The search tool is accessbile from the index page and results page.
 - The User can enter a type of business and post code. 
 - The User will be able to search the databse by clicking the 'Search' button.
@@ -81,7 +83,8 @@ Steps taken -
 
 >Cick the 'Search' button and observe the relevant businesses being displayed. 
 
->Observe that the search toll is available on the results page. 
+>Observe that the search tool is available on the results page. 
+![image](README_files/images/srchresults.png)
 
 >Click the 'Reset' button to confirm the search has been reset. 
 
@@ -103,10 +106,13 @@ Steps taken -
 >Click on the website link and observe you are redirected to that website on another page.
 
 >Repeat this for the email link. This should prompt your device to try and compose an email. 
+![image](README_files/images/weblink.png)
+![image](README_files/images/emaillink.png)
 
 
 *As a User, I would like to Register my business to the Local Directory Database.*
 -----------
+![image](README_files/images/register.png)
 - A new User will be able to register a business by going to the Register page.
 - Registration form is displayed for the User to fill in. 
 - Each field is required to be filled.
@@ -141,22 +147,30 @@ Steps taken -
 >Fill in the form.
 
 >Move mouse over the 'Register' button and observe it changes colour.
+![image](README_files/images/regbut.png)
 
 >Observe a prompt to complete the form if an input field is empty upon clicking 'Register'.
+![image](README_files/images/fillprompt.png)
 
 >Observe a flash message appears when a username already exists upon clicking 'Register'.
 
 >Observe a flash message appears when a email already exists upon clicking 'Register'.
+![image](README_files/images/userexists.png)
+
 >Observe a flash message appears when the passwords dont match for verification upon clicking 'Register'.
+![image](README_files/images/passwordmatch.png)
 
 >Observe a flash message appears when the emails dont match for verification upon clicking 'Register'.
+![image](README_files/images/emailmatch.png)
 
 >Upon filling the register form correctly, click the 'Register' button and observe the app redirects the User to their personal Profile page. 
 
 >Observe a flash message confirming registration was successful. 
+![image](README_files/images/regsuc.png)
 
 *As a User, I would like to be able to Log In to my profile on the app.*
 --------------
+![image](README_files/images/login.png)
 - A User will be able to Log into their Profile by using the Log In page.
 - Log In form is displayed for the User to fill in.
 - Each field is required to be filled.
@@ -178,18 +192,23 @@ Steps taken -
 >Fill in the form.
 
 >Move mouse over the 'Log In' button and observe it changes colour.
+![image](README_files/images/logbut.png)
 
 >Observe a prompt to complete the form if an input field is empty upon clicking 'Log In'.
+![image](README_files/images/fillprompt2.png)
 
 >Observe a flash message appears when a username or password doesnt match upon clicking 'Log In'.
+![image](README_files/images/userpassex.png)
 
 >Upon filling the log in form correctly, click the 'Log In' button and observe the app redirects the User to their personal Profile page. 
 
->Observe a flash message confirming logging in was successful. 
+>Observe a flash message confirming logging in was successful.
+![image](README_files/images/logsuc.png)
 
 
 *As a User, I would like the Profile page to display the business I have registered.*
 ------------
+![image](README_files/images/profile.png)
 - Profile page will display the Users registered business.
 - Profile page provides the ability to update the business information.
 - Profile page also provides the ability for the User to delete their Profile and registered business.
@@ -224,17 +243,23 @@ This testing also applies to these User Stories -
 Steps taken - 
 
 >Observe the Users business is displayed on the Profile page.
+
 >Move mouse over the 'Update your Business Information' button and observe it changes colour. 
+![image](README_files/images/updatebut.png)
 
 >Move mouse over the 'Delete Profile and Business Information' button and observe it chnages colour.
+![image](README_files/images/delbut.png)
 
 >Click on the 'Update your Business Information' button and observe it redirects you to the Edit Information page.
 
->Observe the Edit Information form is displayed. 
+>Observe the Edit Information form is displayed.
+![image](README_files/images/editbus.png)
 
 >Move mouse over the 'Update' button and observe it changes colour.
+![image](README_files/images/updatebut2.png)
 
 >Move mouse over the 'Cancel' button and observe it changes colour.
+![image](README_files/images/cancelbut.png)
 
 >Observe the pre exisiting information has filled the form.
 
@@ -247,20 +272,22 @@ Steps taken -
 >Click the 'Update' button, observe the user has been redirected back to their Profile page, and that the information has been updated.
 
 >Observe a flash message confirming the information has been updated.
+![image](README_files/images/upsuc.png)
 
 >Navigate to Edit Information page. Click the 'Cancel' button, observe the user has been redirected to the Profile page and no business information has been changed.
 
->Click the 'Delete Profile and Business Information' button and observe the 'Are you sure?' Modal appears. 
-
->Move mouse over the 'Cancel' button and observe it changes colour.
+>Click the 'Delete Profile and Business Information' button and observe the 'Are you sure?' Modal appears.
+![image](README_files/images/delmodal.png) 
 
 >Move mouse over the 'Yes, Delete Me!' button and observe it changes colour.
+![image](README_files/images/yesdelbut.png)
 
 >Click the 'Cancel' button to confirm the Modal disappears and User is back on their Profile page.
 
 >Click the 'Yes, Delete Me!' button. Observe the User and Business be deleted. User redirected to the index page.
 
->Observe a flash message confirming User and Business have successfully been deleted. 
+>Observe a flash message confirming User and Business have successfully been deleted.
+![image](README_files/images/delsuc.png)
 
 **Browser Compatibility**
 ---------------------------------------
@@ -286,59 +313,107 @@ The website also works well with smart devices.
 
 ## Desktop View's ##
 
->**Level One**
+>**Homepage**
 
->![image](README_files/images/level_onepage.png)
+>![image](README_files/images/homepage.png)
 
->**Level Two**
+>**Search Results**
 
->![image](README_files/images/level_twopage.png)
+>![image](README_files/images/results.png)
 
->**Level Three**
+>**Log In**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/login.png)
+
+>**Register**
+
+>![image](README_files/images/register.png)
+
+>**Profile**
+
+>![image](README_files/images/profile.png)
+
+>**Update Business**
+
+>![image](README_files/images/editbus.png)
 
 ## Ipad Pro View's ##
 
->**Level One**
+>**Homepage**
 
->![image](README_files/images/indexipro.png)
+>![image](README_files/images/level_onepage.png)
 
->**Level Two**
+>**Search Results**
 
->![image](README_files/images/level_twoipro.png)
+>![image](README_files/images/level_twopage.png)
 
->**Level Three**
+>**Log In**
 
->![image](README_files/images/level_threeipro.png)
+>![image](README_files/images/level_threepage.png)
+
+>**Register**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Profile**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Update Business**
+
+>![image](README_files/images/level_threepage.png)
 
 ## Ipad View's ##
 
->**Level One**
+>**Homepage**
 
->![image](README_files/images/indexipad.png)
+>![image](README_files/images/level_onepage.png)
 
->**Level Two**
+>**Search Results**
 
->![image](README_files/images/level_twoipad.png)
+>![image](README_files/images/level_twopage.png)
 
->**Level Three**
+>**Log In**
 
->![image](README_files/images/level_threeipad.png)
+>![image](README_files/images/level_threepage.png)
+
+>**Register**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Profile**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Update Business**
+
+>![image](README_files/images/level_threepage.png)
 
 ## Smart Phone View's ##
 
->**Level One**
+>**Homepage**
 
->![image](README_files/images/indexsmart.png)
+>![image](README_files/images/level_onepage.png)
 
->**Level Two**
+>**Search Results**
 
->![image](README_files/images/level_twosmart.png)
+>![image](README_files/images/level_twopage.png)
 
->**Level Three**
+>**Log In**
 
->![image](README_files/images/level_threesmart.png)
+>![image](README_files/images/level_threepage.png)
+
+>**Register**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Profile**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Update Business**
+
+>![image](README_files/images/level_threepage.png)
 
 **Bugs and Problems**
 
