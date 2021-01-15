@@ -18,28 +18,30 @@
 
     <div class="login-cont">
         <form class="login-form" method="POST" action="{{ url_for('register') }}">
-            <!-- username **Note - regx - pattern attr**-->
+            <!-- Username -->
             <div class="form-box">
                 <label for="username">Username</label>
                 <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
-            <!-- password -->
+            <!-- Password -->
             <div class="form-box">
                 <label for="password">Password</label>
                 <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
+            
             <div class="form-box">
                 <label for="password2">Verify Password</label>
                 <input id="password2" name="password2" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
-            <!-- name of business -->
+
+            <!-- Name of Business -->
             <div class="form-box">
                 <label for="business_name">Name of Business</label>
                 <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
-            <!-- type of business -->
+            <!-- Type of Business -->
             <div class="form-box">
                 <label>Type of Business</label>
                 <select id="category_name" name="category_name" class="validate" required>
@@ -50,13 +52,13 @@
                 </select>
             </div>
 
-            <!-- website -->
+            <!-- Website -->
             <div class="form-box">
                 <label for="website">Website</label><br>
                 <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
 
-            <!-- email -->
+            <!-- Email -->
             <div class="form-box">
                 <label for="email">Business Email</label><br>
                 <input id="email" name="email" type="email" class="validate" required>  
@@ -67,13 +69,13 @@
                 <input id="email2" name="email2" type="email" class="validate" required>
             </div>
 
-            <!-- address -->
+            <!-- Address -->
             <div class="form-box">
                 <label for="address">Address</label><br>
                 <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
 
-            <!-- register -->
+            <!-- Register -->
             <div class="search-btn">
                 <button type="submit" class="sub-btn">
                     Register

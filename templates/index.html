@@ -15,7 +15,9 @@
             <h4 class="title" >Support your Local Business</h4>
         </div>
 
-        <!-- Search Tool -->
+    </div>
+
+    <!-- Search Tool -->
     <form class="search-tool" action="{{ url_for('search') }}" method="POST">
 
         <div class="row">
@@ -37,10 +39,12 @@
             <a href="{{ url_for('index') }}" class="reset-btn pointer">Reset</a>
             <button type="submit" class="sub-btn">Search</button>
         </div>
+
     </form>
 
+    <!-- Business Cards -->
     <section class="results-cont">
-            
+                
         <div class="bus-results">
             {% for business in results %}
 

@@ -144,7 +144,6 @@ body{
     color: inherit;
 }
 
-
 /* Search Tool / Log In / Register */
 .search-tool{
     opacity: 0;
@@ -445,6 +444,7 @@ body{
 }
 
 @media screen and (min-width: 400px){
+
     .buisness a, .nusiness p{
         font-size: 16px;
     }
@@ -463,12 +463,14 @@ body{
 }
 
 @media screen and (min-width: 700px){
+
     .business{
         margin: 0 5px;
     }
 }
 
 @media screen and (min-width: 750px){
+    
     .bus-card{
         flex: 50%;
     }

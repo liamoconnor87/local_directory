@@ -42,23 +42,23 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    # retrieves categories of business from db
+    # Retrieves categories of business from db
     categories = mongo.db.category.find().sort("category_name", 1)
 
     if request.method == "POST":
-        # checks if username already exists in the db
+        # Checks if username already exists in the db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-        # checks if email already exists in the db
+        # Checks if email already exists in the db
         existing_email = mongo.db.business.find_one(
             {"email": request.form.get("email").lower()})
 
-        # verify email matches
+        # Verify email matches
         email_one = request.form.get("email")
         email_two = request.form.get("email2")
 
-        # verify password matches
+        # Verify password matches
         password_one = request.form.get("password")
         password_two = request.form.get("password2")
 
@@ -96,7 +96,7 @@ def register():
 
         mongo.db.users.insert_one(register_user)
 
-        # puts the new user into 'session' cookie
+        # Puts the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
@@ -107,12 +107,12 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # checks if username exists in the db
+        # Checks if username exists in the db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # checks is password matches db
+            # Checks is password matches db
             if check_password_hash(
                existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -127,12 +127,12 @@ def login():
                         username=session["user"]))
 
             else:
-                # if password does not match
+                # If password does not match
                 flash("Incorrect Username/Password")
                 return redirect(url_for("login"))
 
         else:
-            # if username does not match
+            # If username does not match
             flash("Incorrect Username/Password")
             return redirect(url_for("login"))
 
@@ -170,8 +170,7 @@ def admin_page(admin_user):
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # retrieves session user's username from the db
-    # [username] at the end selects that specific field from the user record.
+    # Retrieves session user's username from the db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -187,12 +186,12 @@ def profile(username):
 
 @app.route("/edit_info/<edit_business>", methods=["GET", "POST"])
 def edit_info(edit_business):
-    # retrieves categories of business from db
+    # Retrieves categories of business from db
     categories = mongo.db.category.find().sort("category_name", 1)
 
     if request.method == "POST":
 
-        # checks if email already exists in the db
+        # Checks if email already exists in the db
         existing_email = mongo.db.business.find_one(
             {"email": request.form.get("email").lower()})
 
@@ -201,7 +200,7 @@ def edit_info(edit_business):
 
         email_input = request.form.get("email").lower()
 
-        # verify email matches
+        # Verify email matches
         email_one = request.form.get("email")
         email_two = request.form.get("email2")
 
@@ -215,7 +214,7 @@ def edit_info(edit_business):
                 return redirect(url_for("edit_info", 
                 edit_business=edit_business))
 
-        # retrieves current category id from business to remove it
+        # Retrieves current category id from business to remove it
         current_category_id = mongo.db.business.find_one(
             {"_id": ObjectId(edit_business)})
 
@@ -255,7 +254,7 @@ def edit_info(edit_business):
 
 @app.route("/delete_probus/<delete_business>")
 def delete_probus(delete_business):
-    # retrieves users ObjectID
+    # Retrieves users ObjectID
     user_id = mongo.db.users.find_one(
         {"username": session["user"]})["_id"]
 
@@ -270,12 +269,12 @@ def delete_probus(delete_business):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookies
+    # Remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("index"))
 
 
-# Change debug to FALSE once app is complete
+# Change debug to FALSE for debugging
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=False)

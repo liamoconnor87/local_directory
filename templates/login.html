@@ -18,19 +18,19 @@
 
     <div class="login-cont">
         <form class="login-form" method="POST" action="{{ url_for('login') }}">
-            <!-- username -->
+            <!-- Username -->
             <div class="form-box">
                 <label for="username">Username</label><br>
                 <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
-            <!-- password -->
+            <!-- Password -->
             <div class="form-box">
                 <label for="password">Password</label><br>
                 <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" required>
             </div>
                 
-            <!-- log in -->
+            <!-- Log in -->
             <div class="search-btn">
                 <button type="submit" class="sub-btn">
                         Log In

@@ -28,4 +28,4 @@ $(document).ready(function(){
     // Flash Messsage Animation
     $(".flashes").fadeOut(8000);
 
-  });
+});

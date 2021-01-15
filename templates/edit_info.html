@@ -19,58 +19,59 @@
     <div class="login-cont">
         <form class="login-form" method="POST" action="{{ url_for('edit_info', edit_business=business_id._id) }}">
             
-                <!-- name of business -->
-                <div class="form-box">
-                    <label for="business_name">Name of Business</label><br>
-                    <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
-                </div>
+            <!-- Name of Business -->
+            <div class="form-box">
+                <label for="business_name">Name of Business</label><br>
+                <input id="business_name" name="business_name" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.name }}" required>
+            </div>
                 
-                <!-- type of business -->
-                <div class="form-box">
-                    <label>Type of Business</label>
-                    <select id="category_name" name="category_name" class="validate" required>
-                        <option value="{{ business_id.category_name }}" disabled selected>{{ business_id.category_name }}</option>
-                        {% for category in categories %}
-                            {% if category.category_name == business_id.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                            {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-                </div>
+            <!-- Type of Business -->
+            <div class="form-box">
+                <label>Type of Business</label>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="{{ business_id.category_name }}" disabled selected>{{ business_id.category_name }}</option>
+                    {% for category in categories %}
+                        {% if category.category_name == business_id.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
 
-                <!-- website -->
-                <div class="form-box">
-                    <label for="website">Website</label><br>
-                    <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.website }}" required>
-                </div>
+            <!-- Website -->
+            <div class="form-box">
+                <label for="website">Website</label><br>
+                <input id="website" name="website" type="text" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.website }}" required>
+            </div>
 
-                <!-- email -->
-                <div class="form-box">
-                    <label for="email">Business Email</label><br>
-                    <input id="email" name="email" type="email" class="validate" value="{{ business_id.email }}"  required>
-                </div>
-                <div class="form-box">
-                    <label for="email2">Verify Business Email</label><br>
-                    <input id="email2" name="email2" type="email" class="validate" value="{{ business_id.email }}" required>
-                </div>
+            <!-- Email -->
+            <div class="form-box">
+                <label for="email">Business Email</label><br>
+                <input id="email" name="email" type="email" class="validate" value="{{ business_id.email }}"  required>
+            </div>
+            
+            <div class="form-box">
+                <label for="email2">Verify Business Email</label><br>
+                <input id="email2" name="email2" type="email" class="validate" value="{{ business_id.email }}" required>
+            </div>
 
-                <!-- address -->
-                <div class="form-box">
-                    <label for="address">Address</label><br>
-                    <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.address }}"  required>
-                </div>
+            <!-- Address -->
+            <div class="form-box">
+                <label for="address">Address</label><br>
+                <input id="address" name="address" type="text" minlength="5" maxlength="100" pattern="^[a-zA-Z0-9}{5,15}$" class="validate" value="{{ business_id.address }}"  required>
+            </div>
 
-                <!-- update -->
-                <div class="search-btn">
-                    <a href="{{ url_for('profile', username=session['user']) }}'" class="reset-btn pointer">
-                        Cancel
-                    </a>
-                    <button type="submit" class="sub-btn">
-                        Update
-                    </button>
-                </div>
+            <!-- Update -->
+            <div class="search-btn">
+                <a href="{{ url_for('profile', username=session['user']) }}'" class="reset-btn pointer">
+                    Cancel
+                </a>
+                <button type="submit" class="sub-btn">
+                    Update
+                </button>
+            </div>
             
         </form>
     </div>
