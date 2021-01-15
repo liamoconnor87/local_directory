@@ -498,9 +498,9 @@ To test these pages I had to do the following.
 
 >15. Repeat this for the Update Business page.
 
->16. Cofirm that np errors show.
+>16. Cofirm that no errors show.
 ![image](README_files/images/htmledbus.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.***
 
 
 2. **Using the websites URL address to check the CSS code**
@@ -535,3 +535,23 @@ I used JShint to validate my Javascript code. Here are the steps I took.
 >6. Validation works automatically, confirm no errors.
 
 ![image](README_files/images/scriptcheck.png)
+
+>**Python**
+
+>![image](README_files/images/python-check.png)
+
+3. **Input directly to check Python code.**
+
+>1. Go to the repository - https://github.com/liamoconnor87/local_directory
+
+>3. Click on the **app.py** file link. This should take you to app.py page displaying the code. From here you can highlight all the code and copy it. 
+
+![image](README_files/images/pycode.png)
+
+>4. Once copied, go to http://pep8online.com.
+
+>5. Paste the code from the app.py file in to where instructed.
+
+>6. **Click** Check code to confirm no errors.
+
+![image](README_files/images/pyapp.png)
