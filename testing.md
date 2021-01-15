@@ -375,69 +375,67 @@ The website also works well with smart devices.
 
 >**Homepage**
 
->![image](README_files/images/level_onepage.png)
+>![image](README_files/images/padhome.png)
 
 >**Search Results**
 
->![image](README_files/images/level_twopage.png)
+>![image](README_files/images/padsrchres.png)
 
 >**Log In**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/padlogin.png)
 
 >**Register**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/padreg.png)
 
 >**Profile**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/padprofile.png)
 
 >**Update Business**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/padedbus.png)
 
 >**Delete Modal**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/paddelmod.png)
 
 ## Smart Phone View's ##
 
 >**Homepage**
 
->![image](README_files/images/level_onepage.png)
+>![image](README_files/images/smrthome.png)
 
 >**Search Results**
 
->![image](README_files/images/level_twopage.png)
+>![image](README_files/images/smrtres.png)
 
 >**Log In**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/smrtlogin.png)
 
 >**Register**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/smrtreg.png)
 
 >**Profile**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/smrtprofile.png)
 
 >**Update Business**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/smrtedbus.png)
 
 >**Delete Modal**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/smrtdelmod.png)
 
 **Bugs and Problems**
 
-- One notable bug I came across was the flip animation to show the front face of the card was not working on iPhones. 
-- I fixed this problem by using webkits.
+- One noteable bug I noticed, on some smart phone's the margin to serperate the logo header and forms is removed. 
 
-![image](README_files/images/webkitpersp.png)
-![image](README_files/images/webkitbf.png)
+![image](README_files/images/smrtbug.png)
 
 
 Automated checks
