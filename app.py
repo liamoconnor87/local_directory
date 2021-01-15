@@ -7,9 +7,6 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-# pip3 install Flask
-# pip3 install flask-pymongo
-# pip3 install dnspython
 
 
 # Creating an instance of flask
@@ -276,7 +273,7 @@ def logout():
     return redirect(url_for("index"))
 
 
-# Change debug to FALSE for debugging
+# Change debug to TRUE for debugging
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")), debug=False)
