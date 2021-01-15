@@ -337,31 +337,39 @@ The website also works well with smart devices.
 
 >![image](README_files/images/editbus.png)
 
+>**Delete Modal**
+
+>![image](README_files/images/delmoddesk.png)
+
 ## Ipad Pro View's ##
 
 >**Homepage**
 
->![image](README_files/images/level_onepage.png)
+>![image](README_files/images/prohmpg.png)
 
 >**Search Results**
 
->![image](README_files/images/level_twopage.png)
+>![image](README_files/images/proresults.png)
 
 >**Log In**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/prologin.png)
 
 >**Register**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/proreg.png)
 
 >**Profile**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/proprofile.png)
 
 >**Update Business**
 
->![image](README_files/images/level_threepage.png)
+>![image](README_files/images/proedbus.png)
+
+>**Delete Modal**
+
+>![image](README_files/images/prodelmod.png)
 
 ## Ipad View's ##
 
@@ -389,6 +397,10 @@ The website also works well with smart devices.
 
 >![image](README_files/images/level_threepage.png)
 
+>**Delete Modal**
+
+>![image](README_files/images/level_threepage.png)
+
 ## Smart Phone View's ##
 
 >**Homepage**
@@ -412,6 +424,10 @@ The website also works well with smart devices.
 >![image](README_files/images/level_threepage.png)
 
 >**Update Business**
+
+>![image](README_files/images/level_threepage.png)
+
+>**Delete Modal**
 
 >![image](README_files/images/level_threepage.png)
 
