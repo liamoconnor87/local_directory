@@ -441,7 +441,7 @@ The website also works well with smart devices.
 Automated checks
 ================
 
-I used the W3C's Validators to check my HTML and CSS code. I did this three ways, here are the steps I took.
+I used the W3C's Validators to check my HTML and CSS code. Here are the steps I took.
 
 >**HTML**
 
@@ -455,53 +455,62 @@ I used the W3C's Validators to check my HTML and CSS code. I did this three ways
 
 >1. Go to https://validator.w3.org and select the URI tab. 
 
->2. Enter http://local-directory.herokuapp.com/index.html into the address bar and click **Check**.
+>2. Enter http://local-directory.herokuapp.com into the address bar and click **Check**.
 
->3. Confirm that no errors or warnings show. 
-
+>3. Confirm that no errors show.
 ![image](README_files/images/urlindex.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
 
-Do the same for each page. 
+Repeat process for these pages. 
 
->4. Enter http://local-directory.herokuapp.com/search.html into the address bar and click **Check**.
+>4. Enter http://local-directory.herokuapp.com/login.html into the address bar and click **Check**.
 
->5. Confirm that no errors or warnings show.
+>5. Confirm that no errors show.
+![image](README_files/images/urlogin.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
 
-![image](README_files/images/urllvl2.png)
+>6. Enter http://local-directory.herokuapp.com/register.html into the address bar and click **Check**.
 
->6. Enter http://local-directory.herokuapp.com/profile/liamoc.html into the address bar and click **Check**.
+>7. Confirm that no errors show.
+![image](README_files/images/urlregister.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
 
->7. Confirm that no errors or warnings show.
+The **Results**, **Profile** and **Update Business** pages are all generated based on the users actions.
+To test these pages I had to do the following. 
 
-![image](README_files/images/urllvl3.png)
+>8. Go to https://local-directory.herokuapp.com and click the *Search* button to create a search page.
 
->8. Enter http://local-directory.herokuapp.com/edit_info/5ff0f844995267946259f4eb.html into the address bar and click **Check**.
+>9. Once generated I opened the page in the Browser's DevTools by right clicking on page and selecting *Inspect*.
 
->9. Confirm that no errors or warnings show.
+>10. Highlight and copy the HTML code in the Elements tab.
 
-![image](README_files/images/urllvl3.png)
+>11. Go to https://validator.w3.org and paste the code into the Direct Input tab once selected.
 
->10. Enter http://local-directory.herokuapp.com/login.html into the address bar and click **Check**.
+>12. Confirm that no errors show.
+![image](README_files/images/htmlsrchres.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.***
 
->11. Confirm that no errors or warnings show.
+>13. Repeat this process for the Profile page.
 
-![image](README_files/images/urllvl3.png)
+>14. Confirm that no errors show.
+![image](README_files/images/htmlprofile.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.*** 
 
->12. Enterhttp://local-directory.herokuapp.com/register.html into the address bar and click **Check**.
+>15. Repeat this for the Update Business page.
 
->13. Confirm that no errors or warnings show.
+>16. Cofirm that np errors show.
+![image](README_files/images/htmledbus.png)
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
 
-![image](README_files/images/urllvl3.png)
 
 2. **Using the websites URL address to check the CSS code**
 
 >1. Go to https://jigsaw.w3.org/css-validator/ and select the URI tab. 
 
->2. Enter https://liamoconnor87.github.io/bobsburgersgame/ into the address bar and click **Check**.
+>2. Enter https://local-directory.herokuapp.com into the address bar and click **Check**.
 
->3. Confirm that no errors show - 2 notable warnings show for webkits used to make the animation work on apple devices. 
-
-![image](README_files/images/urlcss.png)
+>3. Confirm that no errors show. 
+![image](README_files/images/ldcss.png)
 
 I used JShint to validate my Javascript code. Here are the steps I took. 
 
@@ -511,24 +520,18 @@ I used JShint to validate my Javascript code. Here are the steps I took.
 
 3. **Input directly to check JS code.**
 
->1. Go to the repository - https://github.com/liamoconnor87/bobsburgersgame
+>1. Go to the repository - https://github.com/liamoconnor87/local_directory
 
->2. Click on the **assets** link.
+>2. Navigate to the **scripts** folder within the **static** folder and select **script.js**.
 
-![image](README_files/images/assets-folder.png)
+>3. Click on the **script.js** file link. This should take you to script.js page displaying the code. From here you can highlight all the code and copy it. 
 
->3. Click on the **scripts** link. 
+![image](README_files/images/script.png)
 
-![image](README_files/images/scripts-folder.png)
+>4. Once copied, go to https://jshint.com.
 
->4. Click on the **animations.js** file link. This should take you to animations.js page displaying the code. From here you can highlight all the code and copy it. 
+>5. Paste the code from the script.js file in to where instructed.
 
-![image](README_files/images/js-code.png)
+>6. Validation works automatically, confirm no errors.
 
->5. Once copied, go to https://jshint.com.
-
->6. Paste the code from the animations.css file in to where instructed.
-
->7. Validation works automatically, confirm no errors.
-
-![image](README_files/images/anijs-input.png)
+![image](README_files/images/scriptcheck.png)
