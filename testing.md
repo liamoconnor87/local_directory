@@ -559,7 +559,7 @@ I used JShint to validate my Javascript code. Here are the steps I took.
 
 **Admin User Story Testing**
 =======
-*As a User, I would like the Navigation Bar to take me to my Admin page, once I am logged in.*
+*As a User, I would like to have Admin capabilities.*
 ------
 ![image](README_files/images/aduser.png)
 
@@ -567,6 +567,12 @@ I used JShint to validate my Javascript code. Here are the steps I took.
 - When the User, clicks on Admin link in the navigation bar, the User should be redirected to the Admin page.
 - User is able to *Add a type of Business* to the Database. 
 - Flash message appears confirming Business Type has been added. 
+
+This testing also applies to -
+
+***As an Admin User, I would like the Navigation Bar to take me to my Admin page, once I am logged in.***
+
+***As an Admin User, I would like to be able to add a different type's of business to the database.***
 
 Steps taken - 
 >Click on the Admin link on the navigation bar.

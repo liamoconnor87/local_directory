@@ -75,6 +75,10 @@ User Stories
 - As a User, I would like a convienent link at the bottom of the Log In page that takes me to the Register page, incase I have mistakenly clicked the wrong link. 
 - As a User, I would like a convienent link at the bottom of the Register page, that takes me to the Log In page, incase I have mistakenly clicked the wrong link. 
 
+- As a User, I would like to have Admin capabilities.
+- As an Admin User, I would like the Navigation Bar to take me to my Admin page, once I am logged in.
+- As an Admin User, I would like to be able to add a different type of business to the database.
+
 
 Wireframe
 --------------
