@@ -5,9 +5,9 @@ Local Directory App Project
 
 ![image](README_files/images/homepage.png)
 
-The sole goal of the Local Directory App is to bring indepentantly owned local businesses to its users. 
-Users will be able to search for a sepcific type of business in their area from the Local Directory App's Database and the app will return its results. 
-Users can also register their own business, update that information and even delete it from our database should they want to. 
+The sole goal of the Local Directory App is to bring independently owned local businesses to its users. 
+Users will be able to search for a specific type of business in their area from the Local Directory App's Database and the app will return its results. 
+Users can also register their own business, update that information and even delete it from our database should they want to.
 
 UX
 ====
@@ -18,15 +18,15 @@ The homepage consists of a navigation bar with the option to login or register a
 If the user wants to search for a specific business, all they need to do is enter the type business they want and their postcode then click the "Search" button. The app will then return results of the search to the User, with a list of Business Cards. Priority Business Cards will be displayed at the top. 
 
 Each business card displays the following;
-Type of Business
-Name of Business
-Website
-Email
-Address
+- Type of Business
+- Name of Business
+- Website
+- Email
+- Address
 
-The user can also Log In or Register a business, using the navbar to navigate to the register page or Login page. 
+The User can also Log In or Register a business, using the navigation bar to navigate to the register page or Login page. 
 
-Once the User has Logged In or Registered, the navbar changes so the User can view thier profile page as well as log out. 
+Once the User has Logged In or Registered, the navigation bar changes so the User can view their profile page as well as log out. 
 
 On the Profile page the User will be able to Edit/Update the business information they have registered, they will be redirected to the edit information page for that specific business where they can update this information.
 The user will also have the option to delete their business and Profile from the database.
@@ -42,7 +42,7 @@ User Stories
 - As a User, I would like the Local Directory logo to take me to the Index page.
 
 - As a User, I would like a Search Tool, so I can search the database for a specific business in my area. 
-- As a User, I would like a Search Button so I can search the database.
+- As a User, I would like a Search Button, so I can search the database.
 - As a User, I would like there to be a reset button on the search tool, should I want to start my search again. 
 
 - As a User, once I have clicked search, I would like the relevant businesses to be displayed for me to view on a business card. 
@@ -50,7 +50,7 @@ User Stories
 - As a User, I would like to be able to click on the email link on the business cards.
 
 - As a User, I would like to Register my business to the Local Directory Database.
-- As a User, when I am registering I would like a flash message to show if a username already exists on the databse. 
+- As a User, when I am registering I would like a flash message to show if a username already exists on the database. 
 - As a User, when I am registering I would like a flash message to show if the passwords don't match when I verify. 
 - As a User, when I am registering I would like a flash message to show if an email already exists on the database. 
 - As a User, when I am registering I would like a flash message to show if the emails don't match when I verify.  
@@ -66,14 +66,14 @@ User Stories
 - As a User, I would like the Navigation Bar to allow me to log out of my Profile on the App.
 - As a User, I would like a flash message that tells me I have successfully been logged out. 
 - As a User, I would like to be able to update my business information on my Profile page. 
-- As a User, I would like a Cancel button incase I don't want to update my business information.
+- As a User, I would like a Cancel button in case I don't want to update my business information.
 - As a User, I would like a flash message that tells me I have successfully updated my information. 
 - As a User, I would like to be able to Delete my Business and Profile from the database. 
-- As a User, I would like the app to check 'Are you sure?' before deleting, incase I dont want to. 
+- As a User, I would like the app to check 'Are you sure?' before deleting, in case I dont want to. 
 - As a User, I would like a flash message that tells me I have successfully been removed from the database. 
 
-- As a User, I would like a convienent link at the bottom of the Log In page that takes me to the Register page, incase I have mistakenly clicked the wrong link. 
-- As a User, I would like a convienent link at the bottom of the Register page, that takes me to the Log In page, incase I have mistakenly clicked the wrong link. 
+- As a User, I would like a convenient link at the bottom of the Log In page that takes me to the Register page, in case I have mistakenly clicked the wrong link. 
+- As a User, I would like a convenient link at the bottom of the Register page, that takes me to the Log In page, in case I have mistakenly clicked the wrong link. 
 
 - As a User, I would like to have Admin capabilities.
 - As an Admin User, I would like the Navigation Bar to take me to my Admin page, once I am logged in.
@@ -93,11 +93,11 @@ Features
 ----------------------
 Navigation Bar
 ------------
-All 6 pages have a navigation bar at the top of the page that is fixed so that it's acessible at all times whilst the user is using the app. The bar is opaque white, consisting of a green logo of the web app that directs you to index page. The Navigation links change depending on if the user is registered and logged in. Without a logged in user the nav bar consists of links to the log in page and register page. If a user is logged in, the nav bar changes to a link for the users profile and to log out of the web app. 
+All 6 pages have a navigation bar at the top of the page that is fixed so that it's accessible at all times whilst the user is using the app. The bar is opaque white, consisting of a green logo of the web app that directs you to index page. The Navigation links change depending on if the user is registered and logged in. Without a logged in user the navigation bar consists of links to the log in page and register page. If a user is logged in, it changes to a link for the users profile and to log out of the web app. 
 
 If the user is the Admin, the profile link is specifically replaced with the admin page. 
 
-Centered on the page is a the Local Directory logo along with the web apps name identical to that on the navigation bar, in which the user is able to click on it to redirect the user back the index page from anywhere on the app. 
+Centered on the page is the Local Directory logo along with the web apps name identical to that on the navigation bar, in which the user is able to click on it to redirect the user back the index page from anywhere on the app. 
 
 Index Page
 ----------
@@ -116,19 +116,19 @@ At the bottom of the page there is a link for the registration page.
 
 Register Page
 ------
- When the User clicks the 'Register' button, the title of the page becomes 'Register', positioned underneath the logo. Below this is a registration form, for the User to create their Profile and Business Card. The Log in form consists of 9 parts; 
+When the User clicks the 'Register' button, the title of the page becomes 'Register', positioned underneath the logo. Below this is a registration form, for the User to create their Profile and Business Card. The Log in form consists of 9 parts; 
 
- - Username
- - Password
- - Verify password
- - Name of Business
- - Type of Business
- - Website
- - Business email
- - Verify Business email
- - Address
+- Username
+- Password
+- Verify password
+- Name of Business
+- Type of Business
+- Website
+- Business email
+- Verify Business email
+- Address
 
- At the bottom of the page there is a link for the log in page.
+At the bottom of the page there is a link for the Log In page.
 
 Profile Page
 -----
@@ -190,14 +190,14 @@ Add - allows the Admin User to add Business categories to the database.
 
 Flash Message
 --------
-Flash messages are shown when any signifcant action has been carried out by the user. 
+Flash messages are shown when any significant action has been carried out by the user. 
 
 When Registering a business, the flash messages the User could see are;  
 
 - Username already Exists
 - Email already exists
 - Password verification doesn't match 
-- Email verification doesnt match 
+- Email verification doesn't match 
 
 When Logging In, the flash messages the User could see are; 
 
@@ -215,18 +215,18 @@ When on the Index page, the flash messages the User could see are;
 
 Style and Theme
 ---------
-The design of the app primarily uses a consitent colour theme of Green and White, with white sometimes being opaque to create seperation from other features on the page. Red is used as a warning sign when trying to delete the busienss and profile. 
+The design of the app primarily uses a consistent colour theme of Green and White, with white sometimes being opaque to create separation from other features on the page. Red is used as a warning sign when trying to delete the business and profile. 
 
-The app's search tool has a search engine specific feel in it's layout, which should be familiar for Users. 
+The app's search tool has a search engine specific feel in its layout, which should be familiar for Users. 
 
-Beveled edges on the forms, search tool and busienss cards are all consistently implemented as well as drop shadows to give the look a more dynamic pop off the page feel. 
+Beveled edges on the forms, search tool and business cards are all consistently implemented as well as drop shadows to give the look a more dynamic pop off the page feel. 
 
-The app is designed to be simple, with many features self explanatary making it intuitive and easy to use for the User.
+The app is designed to be simple, with many features self explanatory making it intuitive and easy to use for the User.
 
-All is information on the pages is presented centraly and easy on the eyes. 
+All is information on the pages is presented centrally and easy on the eyes. 
 
 
-Features To Be Implmented
+Features To Be Implemented
 ---------------------------------------
 - Google Map API for the address of each business
 - Static Profile Page for each business a user can observe. 
@@ -278,14 +278,14 @@ Deployment
 
 Heroku was used to deploy this app, in order to do this you will need to take the following steps;
 
-**Create Heorku App**
+**Create Heroku App**
 ------------
 >1. Go to the Heroku website log in/sign up.
->2. Go to your app daskboard and click the "Create new app" button.
+>2. Go to your app dashboard and click the "Create new app" button.
 >3. Choose a unique app-name and choose a region, ideally closest to your location.
 >4. To install Heroku, go to your command line and enter **npm install -g heroku**.
->5. You will now need to Log In to heroku from the command line,  enter **heroku login -i** 
->6. Follow the instructions prompted by entering your username and password, your app should now be deployed to heroku.
+>5. You will now need to Log In to Heroku from the command line,  enter **heroku login -i** 
+>6. Follow the instructions prompted by entering your username and password, your app should now be deployed to Heroku.
 
 **Connect Git Remote**
 --------------
@@ -299,7 +299,7 @@ You will now need to connect to your repository.
 
 **Add Procfile**
 ---------
->10. In the command line enter **echo web: python run.puy > Procfile**
+>10. In the command line enter **echo web: python run.py > Procfile**
 
 Creating both **requirements.txt** and **Procfile** you should now be able to successfully push the repository to Heroku successfully. 
 >11. in the Command line enter **git push -u heroku master**
@@ -319,7 +319,7 @@ For this app -
 
 Running Code Locally
 ----------------------------
->1. Go to GitHub Repositry. -https://https://github.com/liamoconnor87/local_directory
+>1. Go to GitHub Repository. -https://https://github.com/liamoconnor87/local_directory
 >2. Click on the **Clone or Download** button in **green** and copy the URL link to the repository in the address box - https://github.com/liamoconnor87/local_directory.git
 >![image](README_files/images/dwnld-repo.png)
 >3. Head into your terminal and **cd** to the path where you would like to clone the repository.
@@ -338,7 +338,7 @@ Media
 --------
 - All images were created by the developer. 
 
-Acknowledgements
+Acknowledgments
 --------------------------
-- I took inspiration from the current problems local businesses are under, durring the global pandemic.
+- I took inspiration from the current problems local businesses are under, during the global pandemic.
 - I received mentorship on this project from Antonio Rodriguez.
