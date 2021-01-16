@@ -10,7 +10,7 @@ Testing
 Steps taken - 
 >Go to the Local Directory App Website - https://local-directory.herokuapp.com
 
->Observe that the Naivgation Bar is at the top of the page. 
+>Observe that the Navigation Bar is at the top of the page. 
 
 >Navigate the site to confirm the navigation bar is displayed. 
 ![image](README_files/images/navbar.png)
@@ -55,16 +55,16 @@ Steps taken -
 *As a User, I would like a Search Tool, so I can search the database for a specific business in my area.*
 ------
 ![image](README_files/images/searchtool.png)
-- The search tool is accessbile from the index page and results page.
+- The search tool is accessible from the index page and results page.
 - The User can enter a type of business and post code. 
-- The User will be able to search the databse by clicking the 'Search' button.
+- The User will be able to search the database by clicking the 'Search' button.
 - The User will be able to reset the search by clicking the 'Reset' button
-- Hovering over the each button, changes its appearance. Combinations of Green and White.
+- Hovering over each button, changes its appearance. Combinations of Green and White.
 - Clicking Search the business cards will be displayed underneath the search tool in relevant order.  
 
 This testing also applies to these User Stories -
 
-***As a User, I would like a Search Button so I can search the database.***
+***As a User, I would like a Search Button, so I can search the database.***
 
 ***As a User, I would like there to be a reset button on the search tool, should I want to start my search again.***
 
@@ -81,7 +81,7 @@ Steps taken -
 
 >Move mouse over the 'Cancel' button and observe it changes colour.
 
->Cick the 'Search' button and observe the relevant businesses being displayed. 
+>Click the 'Search' button and observe the relevant businesses being displayed. 
 
 >Observe that the search tool is available on the results page. 
 ![image](README_files/images/srchresults.png)
@@ -105,7 +105,7 @@ Steps taken -
 
 >Click on the website link and observe you are redirected to that website on another page.
 
->Repeat this for the email link. This should prompt your device to try and compose an email. 
+>Repeat this for the email link. This should prompt your device to try and compose an email.
 ![image](README_files/images/weblink.png)
 ![image](README_files/images/emaillink.png)
 
@@ -116,7 +116,7 @@ Steps taken -
 - A new User will be able to register a business by going to the Register page.
 - Registration form is displayed for the User to fill in. 
 - Each field is required to be filled.
-- Username and Buiness email must be unique. 
+- Username and Business email must be unique. 
 - Password verification is required. 
 - Email verification is required.
 - Hovering the mouse over the 'Register' button changes its appearance. Combinations of Green and White. 
@@ -126,17 +126,17 @@ Steps taken -
 
 This testing also applies to these User Stories -
 
-***As a User, when I am registering I would like a flash message to show if a username already exists on the databse.***
+***As a User, when I am registering I would like a flash message to show if a username already exists on the database.***
 
 ***As a User, when I am registering I would like a flash message to show if the passwords dont match when I verify.*** 
 
 ***As a User, when I am registering I would like a flash message to show if an email already exists on the database.*** 
 
-***As a User, when I am registering I would like a flash message to show if the emails dont match when I verify.***  
+***As a User, when I am registering I would like a flash message to show if the emails dont match when I verify.*** 
 
 ***As a User, I would like a flash message that tells me I have successfully registered.***
 
-***As a User, I would like a convienent link at the bottom of the Register page, that takes me to the Log In page, incase I have mistakenly clicked the wrong link.*** 
+***As a User, I would like a convenient link at the bottom of the Register page, that takes me to the Log In page, in case I have mistakenly clicked the wrong link.*** 
 
 ***As a User, Once I am registered I would like a Profile page specific to me.***
 
@@ -433,7 +433,7 @@ The website also works well with smart devices.
 
 **Bugs and Problems**
 
-- One noteable bug I noticed, on some smart phone's the margin to serperate the logo header and forms is removed. 
+- One notable bug I noticed, on some smart phone's the margin to separate the logo header and forms is removed. 
 
 ![image](README_files/images/smrtbug.png)
 
@@ -459,7 +459,7 @@ I used the W3C's Validators to check my HTML and CSS code. Here are the steps I 
 
 >3. Confirm that no errors show.
 ![image](README_files/images/urlindex.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I preferred this visually.***
 
 Repeat process for these pages. 
 
@@ -467,13 +467,13 @@ Repeat process for these pages.
 
 >5. Confirm that no errors show.
 ![image](README_files/images/urlogin.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I preferred this visually.***
 
 >6. Enter http://local-directory.herokuapp.com/register.html into the address bar and click **Check**.
 
 >7. Confirm that no errors show.
 ![image](README_files/images/urlregister.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I prefered this visually.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level. Business Cards show a small business category heading at top followed by a larger heading for the business name. I preferred this visually.***
 
 The **Results**, **Profile** and **Update Business** pages are all generated based on the users actions.
 To test these pages I had to do the following. 
@@ -488,19 +488,19 @@ To test these pages I had to do the following.
 
 >12. Confirm that no errors show.
 ![image](README_files/images/htmlsrchres.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level.***
 
 >13. Repeat process 9 - 12 for the Profile page.
 
 >14. Confirm that no errors show.
 ![image](README_files/images/htmlprofile.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.*** 
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level.*** 
 
 >15. Repeat process 9 - 12 for the Update Business page.
 
->16. Cofirm that no errors show.
+>16. Confirm that no errors show.
 ![image](README_files/images/htmledbus.png)
-***Note: Warnings show for section lacking header and considerations for h1 elements to be top level.***
+***Note: Warnings show for section lacking header and considerations for h1 elements to be top-level.***
 
 
 2. **Using the websites URL address to check the CSS code**
